@@ -1,0 +1,45 @@
+.info-list{
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(30px, 6.4957vw, 76px);
+
+    &__card{
+        display: flex;
+        align-items: center;
+        grid-gap: 13px;
+        font-weight: 500;
+        font-size: clamp(14px, 1.3675vw, 16px);
+
+        @include mobile{
+            width: 100%;
+            padding: 15px;
+            justify-content: center;
+            border: dashed 1px var(--br-c);
+            background: var(--gr-f);
+            border-radius: 8px;
+        }
+    }
+
+    &__item{
+        @include mobile{
+            width: 100%;
+        }
+    }
+
+    &__icon{
+        width: clamp(40px, 5.1282vw, 60px);
+        height: clamp(40px, 5.1282vw, 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gr-f);
+        border-radius: 100%;
+        border: solid 1px var(--br-c);
+    }
+
+    @include mobile{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 10px 30px;
+    }
+}

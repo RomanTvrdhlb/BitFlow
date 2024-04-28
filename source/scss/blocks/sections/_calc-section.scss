@@ -1,0 +1,34 @@
+.calc-section{
+    padding-bottom: clamp(70px, 10.2564vw, 120px);
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+        z-index: 1;
+        position: relative;
+
+        &:after{
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1189' height='797' fill='none'%3E%3Cg filter='url(%23filter0_f_156_1387)'%3E%3Cellipse cx='594.5' cy='345.5' fill='url(%23paint0_linear_156_1387)' rx='318.5' ry='255.5'/%3E%3C/g%3E%3Cg filter='url(%23filter1_f_156_1387)'%3E%3Cellipse cx='595' cy='364.5' fill='%230B0A17' fill-opacity='0.71' rx='257' ry='201.5'/%3E%3C/g%3E%3Cg filter='url(%23filter2_f_156_1387)'%3E%3Cpath fill='%230B0A17' d='M100 196h989v501H100z'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_156_1387' width='817' height='691' x='186' y='0' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_156_1387' stdDeviation='45'/%3E%3C/filter%3E%3Cfilter id='filter1_f_156_1387' width='674' height='563' x='258' y='83' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_156_1387' stdDeviation='40'/%3E%3C/filter%3E%3Cfilter id='filter2_f_156_1387' width='1189' height='701' x='0' y='96' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_156_1387' stdDeviation='50'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_156_1387' x1='276' x2='957.583' y1='90' y2='158.703' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%236B76FE'/%3E%3Cstop offset='1' stop-color='%2353FFEC'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+          position: absolute;
+          background-size: cover;
+          content: '';
+          width: Min(101.6239vw, 1189px);
+          height: Min(68.1197vw, 797px);
+          bottom: 0;
+          left: 50%;
+          z-index: -2;
+          transform: translate(-50%, 81%);
+          pointer-events: none;
+        }
+    }
+
+    &__title{
+       display: inline-flex;
+       flex-direction: column;
+       b{
+        padding-left: clamp(20px, 4.2735vw, 50px);
+       }
+    }
+}

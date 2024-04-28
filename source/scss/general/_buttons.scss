@@ -1,0 +1,28 @@
+.main-btn {
+  border-radius: 999px;
+  padding: 15px 22px;
+  max-width: 297px;
+  width: 100%;
+  height: 80px;
+  background: var(--gr-k);
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(var(--cl-f),1.0);
+  font-family: var(--font-family);
+  grid-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .4s;
+  position: relative;
+
+  &:hover {
+    color:  rgba(var(--cl-a),1.0);
+  }
+
+  &--mode{
+    background: var(--gr-j);
+  }
+
+}
+

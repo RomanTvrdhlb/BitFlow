@@ -1,0 +1,152 @@
+.footer {
+  padding: 27px 0 23px;
+  overflow: hidden;
+  background: var(--gr-a);
+
+  &__audit{
+    width: fit-content;
+    background: rgba(var(--bg-d),1.0);
+    border-radius: 12px;
+    padding: 12px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include for-tablet{
+      margin-top: 13px;
+    }
+  }
+
+  .main-supply{
+    @include tablet{
+      grid-row: 2;
+     
+      @include for-small-tablet{
+        grid-column: 2;
+        justify-self: end;
+      }
+    }
+    @include small-tablet{
+      @include for-mobile{
+        grid-column: span 2;
+        justify-self: center;
+      }
+    }
+  }
+
+  .footer-nav{
+    @include tablet{
+      grid-column: 1;
+      
+      @include for-small-tablet{
+        grid-row: 2;
+      }
+    }
+    @include small-tablet{
+      @include for-mobile{
+        grid-column: span 2;
+        width: fit-content;
+        justify-self: center;
+      }
+    }
+  }
+
+  &__inner{
+    padding-bottom: clamp(22px, 2.2222vw, 26px);
+    
+    @include for-tablet{
+      display: flex;
+      grid-gap: 15px clamp(20px, 3.4188vw, 40px);
+    }
+
+    @include tablet{
+      display: grid;
+      grid-gap: 25px 20px;
+      @include for-mobile{
+        grid-template-columns: auto minmax(397px, 1fr);
+      }
+    }
+    @include mobile{
+      grid-template-columns: 100%;
+    }
+
+    .encryption{
+      @include tablet{
+        @include for-mobile{
+          align-self: center;
+          grid-row: 1;
+          grid-column: 2/3;
+          justify-self: end;
+        }
+      }
+    }
+  }
+
+  &__col{
+    grid-gap: 10px 31px;
+
+    @include for-tablet{
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include tablet{
+      display: contents;
+    }
+    
+    &--right{
+     @include for-tablet{
+      align-items: flex-end;
+      flex-grow: 1;
+     }
+
+     @include tablet{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+
+      @include for-mobile{
+        grid-column: span 2;
+      }
+     }
+    }
+  }
+
+  .social{
+      @include for-tablet{
+        margin-top: 13px;
+      }
+  }
+
+  .logo{
+    @include for-mobile{
+      margin: 11px 0;
+    }
+  }
+
+
+  &__copyright{
+    position: relative;
+    padding-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(var(--cl-c),1.0);
+
+    &::before{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 100vw;
+      border-top: 1px solid var(--br-b);
+    }
+  }
+}
+

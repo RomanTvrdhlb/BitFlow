@@ -1,0 +1,85 @@
+.main-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.3932vw, 28px);
+
+    &__title{
+
+        img{
+            margin-right: 10px;
+            width: clamp(56px, 9.8291vw, 115px);
+            height: clamp(35px, 6.0684vw, 71px);
+            margin-bottom: clamp(3.9px, .6838vw, 8px);
+        }
+
+        @include mobile{
+            max-width: clamp(350px, 55.5556vw, 650px);
+        }
+    }
+
+    &__subtitle{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(14px, 1.3675vw, 16px);
+        text-transform: uppercase;
+        background: var(--gr-e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__bonus{
+        backdrop-filter: blur(10.800000190734863px);
+        padding: 24px clamp(26px, 4.1026vw, 48px) 24px 26px;
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+
+        &-text{
+            font-weight: 500;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        @include tablet{
+            background: rgba(var(--bg-e),.35);
+            border-radius: 999px;
+        }
+
+        @include mobile{
+            justify-content: center;
+        }
+    }
+
+    &__bottom{
+        max-width: 593px;
+        width: 100%;
+        border-radius: 999px;
+        overflow: hidden;
+        margin-top: 3px;
+        display: flex;
+        background: rgba(var(--bg-e),.35);
+        border-radius: 0 99px 99px 0;
+
+
+        @include tablet{
+            background-color: initial;
+            grid-gap: 10px;
+            border-radius: 0;
+            width: fit-content;
+            flex-direction: column;
+            
+        }
+
+        @include mobile{
+            width: 100%;
+        }
+    }
+
+    .main-btn{
+        @include mobile{
+            max-width: 100%;
+        }
+    }
+}

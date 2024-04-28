@@ -1,0 +1,107 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  // --------------- default global variables ---------------
+  --error-bg: #d01f1f;
+  --body-bg: #0b0a17;
+  --body-font-size: 16px;
+  --content-width: 1170px;
+
+  --container-offset: clamp(16px, 2.0513vw, 24px);
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // --------------- default JS variables ---------------
+
+  --header-height: 104px;
+
+  @include tablet{
+    --header-height: 100px;
+  }
+
+  @include small-tablet{
+    --header-height: 94px;
+  }
+
+  // --------------- default scroll variables ---------------
+  --scrollbar-thumb: rgb(43, 52, 206);
+  --scrollbar-track: #121835;
+  --scrollbar-track-hover: transparent;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+  // --------------- default select variables ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #FDFDFD;
+  --select-focus-border: #FDFDFD;
+
+  // --------------- default font-family variables ---------------
+
+  --font-family: "AllianceNo.2", sans-serif; // var(--font-family);
+  --second-family: "Nexa", sans-serif; // var(--second-family);
+  --third-family: "Nexa-Bold", sans-serif; // var(--third-family);
+  --font3: "Inter", sans-serif; // var(--font3);
+  --font4: "Nexa-Regular", sans-serif; // var(--font4);
+
+
+  // --------------- default text color variables ---------------
+  --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-c: #{HexToRGB(#8282B6)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#9ab2d3)}; // rgba(var(--cl-d),1.0);
+  --cl-e: #{HexToRGB(#141C25)}; // rgba(var(--cl-e),1.0);
+  --cl-f: #{HexToRGB(#0b0a17)}; // rgba(var(--cl-f),1.0);
+
+
+  --cl-g: #{HexToRGB(#8A92BC)}; // rgba(var(--cl-g),1.0);
+  --cl-h: #{HexToRGB(#676D8E)}; // rgba(var(--cl-h),1.0);
+  --cl-i: #{HexToRGB(#5e5e60)}; // rgba(var(--cl-i),1.0);
+  --cl-j: #{HexToRGB(#928585)}; // rgba(var(--cl-j),1.0);
+  --cl-k: #{HexToRGB(#a4a4ac)}; // rgba(var(--cl-k),1.0);
+  --cl-l: #{HexToRGB(#af9775)}; // rgba(var(--cl-l),1.0);
+  --cl-m: #{HexToRGB(#828282)}; // rgba(var(--cl-m),1.0);
+  --cl-n: #{HexToRGB(#acada7)}; // rgba(var(--cl-n),1.0);
+
+  // --------------- default background color variables ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+  --bg-c: #{HexToRGB(#0f0e27)}; // rgba(var(--bg-c),1.0);
+  --bg-d: #{HexToRGB(#201f38)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#121228)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#0b0a17)}; // rgba(var(--bg-f),1.0);
+  --bg-g: #{HexToRGB(#1e1c36)}; // rgba(var(--bg-g),1.0);
+
+
+  --bg-h: #{HexToRGB(#45407b)}; // rgba(var(--bg-h),1.0);
+  
+  --bg-i: #{HexToRGB(#2C3459)}; // rgba(var(--bg-i),1.0);
+  --bg-j: #{HexToRGB(#121212)}; // rgba(var(--bg-j),1.0);
+  --bg-k: #{HexToRGB(#0C1022)}; // rgba(var(--bg-k),1.0);
+  --bg-l: #{HexToRGB(#D9D9D9)}; // rgba(var(--bg-l),1.0);
+
+  // --------------- default border color variable ---------------
+  --br-a: #0f0e27; // var(--br-a);
+  --br-b: #201f38; // var(--br-b);
+  --br-c: #1b1839; // var(--br-c);
+  --br-d: #45407b; // var(--br-d);
+
+
+  --br-e: #9A8BDA; // var(--br-e);
+
+ // --------------- default gradient color variable ---------------
+ --gr-a: linear-gradient(180deg, #0f0e27 100%, #0f0e27 100%); // var(--gr-a);
+ --gr-b: linear-gradient(180deg, #201f38 0%, #201f38 100%); // var(--gr-b);
+ --gr-c: linear-gradient(111deg, #6b76fe 0%, #53ffec 100%); // var(--gr-c);
+ --gr-d: linear-gradient(180deg, #6b76fe 0%, #53ffec 100%); // var(--gr-d);
+ --gr-e: linear-gradient(77deg, #6b76fe 0%, #53ffec 100%); // var(--gr-e);
+ --gr-f: linear-gradient(180deg, rgba(17, 15, 36, 0) 0%, #110f24 100%); // var(--gr-f);
+ --gr-g: linear-gradient(180deg, #15132d 0%, #15132d 100%); // var(--gr-g);
+ --gr-h: linear-gradient(350deg, rgba(36, 32, 79,0) 0%, rgba(38, 34, 93,1) 100%); // var(--gr-h);
+ --gr-i: linear-gradient(162deg, #6b76fe 0%, #53ffec 100%); // var(--gr-i);
+ --gr-j: linear-gradient(126deg, #6b76fe 0%, #53ffec 100%); // var(--gr-j);
+ --gr-k: radial-gradient(95.86% 172.41% at 50% 45.37%, rgb(67, 76, 255) 0%, rgb(62, 219, 197) 100%); // var(--gr-k);
+
+}
+
+
