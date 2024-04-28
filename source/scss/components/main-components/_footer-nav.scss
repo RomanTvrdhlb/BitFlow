@@ -29,7 +29,7 @@
     ul{
         display: flex;
         flex-direction: column;
-        grid-gap: 10px;
+        grid-gap: clamp(10px, 1.1966vw, 14px);
 
 
         @include mobile{

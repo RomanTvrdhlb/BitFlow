@@ -158,6 +158,8 @@
   }
 
   @include ios{
+    height: fit-content;
+    padding-left: initial;
     padding-top: 10px;
     flex-direction: column;
   }

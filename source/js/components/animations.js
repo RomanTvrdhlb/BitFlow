@@ -1,25 +1,62 @@
 import lottie from 'lottie-web';
 
-const phoneData = require('./../phone_v1.json');
-const graficData = require('./../graph_v1.json');
+const platformData = require('./../platfrom.json');
+const moreData = require('./../more.json');
+const securityData = require('./../security.json');
+const aprData = require('./../apr.json');
+const supportData = require('./../support.json');
+const riskData = require('./../risk.json');
 
-const phoneOptions = {
+
+const platformEl = document.getElementById('platform');
+const moreEl = document.getElementById('more');
+const securityEl = document.getElementById('security');
+const aprEl = document.getElementById('apr');
+const supportEl = document.getElementById('support');
+const riskEl = document.getElementById('risk');
+
+const platformOptions = {
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  animationData: phoneData,
+  animationData: platformData,
 };
 
-const graficOptions = {
+const moreOptions = {
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  animationData: graficData,
+  animationData: moreData,
 };
 
-const phoneContainer = document.getElementById('phone');
-const mobileContainer = document.getElementById('mobile');
-const graficContainer = document.getElementById('graph');
+const securityOptions = {
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  animationData: securityData,
+};
+
+const aprOptions = {
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  animationData: aprData,
+};
+
+const supportOptions = {
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  animationData: supportData,
+};
+
+const riskOptions = {
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  animationData: riskData,
+};
+
 
 function initAnimation(options, container) {
   if (options && container) {
@@ -28,6 +65,9 @@ function initAnimation(options, container) {
   }
 }
 
-initAnimation(phoneOptions, phoneContainer);
-initAnimation(phoneOptions, mobileContainer);
-initAnimation(graficOptions, graficContainer);
+initAnimation(platformOptions, platformEl);
+initAnimation(moreOptions, moreEl);
+initAnimation(securityOptions, securityEl);
+initAnimation(aprOptions, aprEl);
+initAnimation(supportOptions, supportEl);
+initAnimation(riskOptions, riskEl);

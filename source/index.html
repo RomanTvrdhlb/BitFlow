@@ -75,7 +75,8 @@
               <li class="discover-section__item">
                 <div class="discover-card">
                   <div class="discover-card__image">
-                      <img width='223' height='223' src='img/sprite/earth.svg' alt='image'>
+                    <div id="platform"></div>
+                      <!-- <img width='223' height='223' src='img/sprite/earth.svg' alt='image'> -->
                   </div>
 
                   <div class="discover-card__box">
@@ -86,12 +87,9 @@
               </li>
               <li class="discover-section__item">
                 <div class="discover-card">
-                  <div class="discover-card__image discover-card__image--more">
-                      <picture>
-                        <source type='image/webp' srcset='img/index/more.webp'>
-                        <img width='316' height='210' src='img/index/more.png' alt='image'>
-                      </picture>
-                  </div>
+                  <div class="discover-card__image">
+                      <div id="more"></div>
+                    </div>
 
                   <div class="discover-card__box">
                     <span class="discover-card__title">More blockchains</span>
@@ -102,10 +100,7 @@
               <li class="discover-section__item">
                 <div class="discover-card">
                   <div class="discover-card__image">
-                    <picture>
-                      <source type='image/webp' srcset='img/index/img2.webp'>
-                      <img width='209' height='199' src='img/index/img2.png' alt='image'>
-                    </picture>
+                    <div id="security"></div>
                   </div>
 
                   <div class="discover-card__box">
@@ -116,8 +111,8 @@
               </li>
               <li class="discover-section__item">
                 <div class="discover-card">
-                  <div class="discover-card__image discover-card__image--line">
-                      <img width='377' height='205' src='img/sprite/line.svg' alt='image'>
+                  <div class="discover-card__image">
+                      <div id="apr"></div>
                   </div>
 
                   <div class="discover-card__box">
@@ -128,11 +123,8 @@
               </li>
               <li class="discover-section__item">
                 <div class="discover-card">
-                  <div class="discover-card__image discover-card__image--supp">
-                      <picture>
-                        <source type='image/webp' srcset='img/index/supp.webp'>
-                        <img width='375' height='198' src='img/index/supp.png' alt='image'>
-                      </picture>
+                  <div class="discover-card__image">
+                      <div id="support"></div>
                   </div>
 
                   <div class="discover-card__box">
@@ -144,10 +136,7 @@
               <li class="discover-section__item">
                 <div class="discover-card">
                   <div class="discover-card__image">
-                      <picture>
-                        <source type='image/webp' srcset='img/index/risk.webp'>
-                        <img width='231' height='166' src='img/index/risk.png' alt='image'>
-                      </picture>
+                      <div id="risk"></div>
                   </div>
 
                   <div class="discover-card__box">
@@ -290,7 +279,7 @@
               <b>program</b></h4>
               <p>Skyrocket your profit by inviting your friends! With our unique Affiliate program you have a chance to earn up to 5% from your friend's deposit. Experience 3-level program and withdraw earnings without any restrictions.</p>
           </div>
-          <ul class='affiliate-acc main-acc' data-single='true' data-breakpoint='576' data-accordion-init>
+          <ul class='affiliate-acc main-acc' data-accordion-init data-default="1">
             <li class='main-acc__item'>
               <button class='main-acc__btn' data-id='1'>
                 <span class="main-acc__btn-label">

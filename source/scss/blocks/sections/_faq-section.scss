@@ -8,9 +8,7 @@
     }
 
     &__title{
-        @include small-tablet{
-            align-self: center;
-        }
+        font-family: var(--second-family);
     }
 
     &__col{

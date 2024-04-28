@@ -1,11 +1,57 @@
 .affiliate-section{
-    padding-bottom: clamp(90px, 15.0427vw, 176px);
+    overflow: hidden;
+    @include for-small-tablet{
+        padding-bottom: clamp(90px, 13.3333vw, 156px);
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+         + section{
+            margin-top: -80px;
+        }
+    }
+    }
+
+    @include mobile{
+        + section{
+           margin-top: -40px;
+       }
+    }
+
+    &::before{
+        @media (min-width: (768px)) and (max-width: (1350px)) {
+           left: -6%;
+        }
+    }
+    &::after{
+        @media (min-width: (768px)) and (max-width: (1350px)) {
+           right: -6%;
+        }
+    }
+
+    &::before, &::after{
+        @include small-tablet{
+            width: 90px;
+            height: 400px;
+            @include for-mobile{
+                transform: translateY(-15%);
+            }
+        }
+        
+        @include mobile{
+            transform: translateY(-10%);
+        }
+        
+    }
 
     &__box{
         display: flex;
         flex-direction: column;
         grid-gap: 34px;
-        max-width: Min(56.1538vw, 657px);
+
+        @include for-small-tablet{
+            max-width: Min(56.1538vw, 657px);
+        }
     }
 
     &__top{
@@ -14,21 +60,58 @@
         grid-gap: 34px;
 
         p{
-            max-width: Min(52.906vw, 619px);
+            @include for-small-tablet{
+                max-width: Min(52.906vw, 619px);
+            }
         }
     }
 
     .title{
+        font-family: var(--second-family);
+  
         b{
             margin-left: clamp(20px, 4.2735vw, 50px);
         }
     }
 
     &__image{
-        position: absolute;
-        top: 0;
-        right: -12%;
-        z-index: -1;
+
+        @include for-laptop{
+            right: -12%;
+        }
+
+        @include laptop{
+            @include for-tablet{
+            right: -14%;
+            }
+        }
+
+        @include tablet{
+            @include for-small-tablet{
+                right: -16%;
+            }
+        }
+
+        @include for-small-tablet{
+            position: absolute;
+            top: 3%;
+            z-index: -1;
+            width: Min(89.7436vw, 1050px);
+        }
+
+        @include small-tablet{
+            order: 3;
+            width: 100%;
+        }
+
+        img,picture{
+            width: 100%;
+
+            @include small-tablet{
+                left: -3%;
+                position: relative;
+            }
+        }
     }
 
     .container{

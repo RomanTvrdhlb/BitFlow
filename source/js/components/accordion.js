@@ -109,8 +109,6 @@ export const accInit = (accParrents, dataBtn, dataContent) => {
 
         toggleAccordionButton(defaultOpenButton);
         openAccordion(defaultOpenContent);
-
-        console.log(defaultOpenContent)
       };
 
       if (accordionParrent.dataset.default) {
@@ -128,50 +126,3 @@ export const accInit = (accParrents, dataBtn, dataContent) => {
 };
 
 accInit([...document.querySelectorAll('[data-accordion-init]')], "data-id", "data-content");
-
-// const mobileAcc = document.querySelectorAll("[data-mobile-acc]");
-
-// if (mobileAcc.length) {
-//   // adaptiveInit("576");
-// }
-
-// function adaptiveInit(breakpoint) {
-//   let containerWidth = document.documentElement.clientWidth;
-//
-//   if (containerWidth <= `${breakpoint}`) {
-//     mobileAcc.forEach((item) => {
-//       removeClassInArray(
-//         item.querySelectorAll("[data-tab-content]"),
-//         "active"
-//       );
-//
-//       item.querySelectorAll("[data-id]").forEach((btn) => {
-//         btn.addEventListener("click", function () {
-//           const currentId = btn
-//             .closest("[data-tab-content]")
-//             .getAttribute("data-tab-content");
-//           const currentBtnId = btn.getAttribute("data-id");
-//
-//           const box = item.querySelector(`[data-tab-content='${currentId}']`);
-//
-//           let boxHeight = box.style.maxHeight.replace("px", "");
-//           let innerHeight = document
-//             .querySelector(`[data-content='${currentBtnId}']`)
-//             .style.maxHeight.replace("px", "");
-//
-//           box.style.maxHeight = +innerHeight + +boxHeight + "px";
-//         });
-//       });
-//     });
-//     accInit(mobileAcc, "data-tab", "data-tab-content");
-//   }
-//   if (containerWidth > `${breakpoint}`) {
-//     document.querySelectorAll("[data-tab-content]").length && addCustomClass(
-//       document.querySelectorAll("[data-tab-content]")[0],
-//       "active"
-//     );
-//   }
-// }
-
-
-// observeBodyMutation(accInit);
