@@ -33,13 +33,15 @@
         @include small-tablet{
             width: 90px;
             height: 400px;
+            top: initial;
+            bottom: 1%;
             @include for-mobile{
-                transform: translateY(-15%);
+                transform: translateY(-35%);
             }
         }
         
         @include mobile{
-            transform: translateY(-10%);
+            transform: translateY(-5%);
         }
         
     }
