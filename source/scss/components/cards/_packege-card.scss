@@ -1,0 +1,192 @@
+.packege-card{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    grid-gap: 23px;
+    border-radius: 21px;
+    background: var(--gr-l);
+
+    &__top{
+        overflow: hidden;
+        position: relative;
+        padding: 26px 15px 15px 54px;
+        display: grid;
+        grid-template-columns: 55px 1fr;
+        grid-gap: 4px 50px;
+        background-color: rgba(var(--bg-h),1);
+        z-index: 1;
+
+        @include tablet{
+            @include for-mobile{
+                grid-gap: 4px clamp(33px, 4.883vw, 50px);
+            }
+        }
+
+        @include mobile{
+            grid-gap: 4px 50px;
+        }
+        
+        &::before{
+            position: absolute;
+            background-image: url(../img/staking/icon.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+            width: 380px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            background-color: rgba(var(--bg-h),1);
+            pointer-events: none;
+            z-index: -1;
+        }
+    }
+
+    &__icon{
+        grid-row: span 2;
+        grid-column: 1;
+        top: 5px;
+        position: relative;
+    }
+
+    &__box{
+        padding: 0 18px 30px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+
+
+        .main-btn{
+            height: 50px;
+            max-width: 100%;
+            font-size: 14px;
+            line-height: 143%;
+        }
+    }
+
+    &__list{
+       display: flex;
+       grid-gap: 14px 28px;
+
+       &-icon{
+        grid-row: span 2;
+        grid-column: 1;
+       }
+
+       @include small-tablet{
+        flex-wrap: wrap;
+       }
+    }
+
+    &__value{
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(var(--cl-c), 1)
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        grid-gap: 5px 8px;
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 6px;
+        position: relative;
+        width: 100%;
+
+        &-icon{
+            position: absolute;
+            bottom: 1px;
+            left: 15px;
+            transform: translateY(-50%);
+        }
+
+        &-value{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 167%;
+            position: absolute;
+            right: 15px;
+            bottom: 25px;
+            transform: translateY(50%);
+            display: none;
+        }
+
+       
+    }
+
+    &__title{
+        align-self: end;
+        font-weight: 600;
+        font-size: clamp(18px, 1.7949vw, 21px);
+    }
+
+    &__percent{
+        font-size: 14px;
+    }
+    
+    &__input{
+        width: 100%;
+        padding: 15px 13px 15px 47px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: rgba(var(--cl-a),1.0);
+        border: 1px solid var(--br-e);
+        border-radius: 12px;
+        height: 50px;
+        background: var(--gr-o);
+
+        &::placeholder{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            color: rgba(var(--cl-a),1.0);
+        }
+
+        &.focus-visible{
+            border-color: rgba(var(--bg-h),.6);
+        }
+    }
+
+    &__subtitle{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 167%;
+        display: none;
+    }
+
+    &.stake{
+        .packege-card{
+            &__subtitle{
+                display: flex;
+            }
+
+            &__label{
+                &-value{
+                    display: flex;
+                }
+            }
+
+            &__item{
+                grid-template-columns: 100%;
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+}

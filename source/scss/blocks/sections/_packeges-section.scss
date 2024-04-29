@@ -1,0 +1,44 @@
+.packeges-section{
+    padding-bottom: clamp(70px, 9.4872vw, 111px);
+
+    .title{
+        display: inline-flex;
+        flex-direction: column;
+        line-height: 118%;
+        font-family: var(--second-family);
+        width: fit-content;
+        b{
+         text-align: right;
+        }
+     }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 21px;
+    }
+
+
+        &::before, &::after{
+        transform: translateY(-45%);
+      } 
+     
+      &::before{
+        @include desktop{
+            left: -6%;
+        }
+      }
+
+      &::after{
+        @include desktop{
+            right: -6%;
+        }
+      }
+    
+  
+      &::before, &::after{
+        @include tablet{
+          display: none;
+        }
+      }
+}

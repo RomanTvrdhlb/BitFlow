@@ -1,0 +1,70 @@
+.choose-card{
+    padding: 0 clamp(24px, 3.0769vw, 36px) 28px;
+    background: var(--gr-l);
+    border-radius: 21px;
+    height: 100%;
+    @include gradient-border(var(--gr-m), 1px);
+    overflow: hidden;
+
+    &__image{
+        position: absolute;
+        left: -2px;
+        top: 0;
+        display: flex;
+
+        @include for-small-tablet{
+            width: clamp(200px, 22.735vw, 266px);
+        }
+
+        @include small-tablet{
+            width: clamp(230px, 34.635vw, 266px);
+        }
+
+        img,picture{
+            width: 100%;
+            mix-blend-mode: lighten;
+        }
+
+        &--mode{
+            left: -4px;
+           
+            @include for-small-tablet{
+                width: clamp(210px, 24.1026vw, 282px);
+            }
+
+            @include small-tablet{
+                width: clamp(250px, 36.719vw, 282px);
+            }
+        }
+
+        &--mining{
+            left: -10px;
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 14px;
+
+        @include for-small-tablet{
+            padding-top: clamp(170px, 18.2051vw, 213px);
+        }
+
+        @include small-tablet{
+            padding-top: clamp(180px, 27.734vw, 213px);
+        }
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: clamp(18px, 1.7949vw, 21px);
+    }
+
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
