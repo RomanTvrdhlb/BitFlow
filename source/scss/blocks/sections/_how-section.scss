@@ -1,0 +1,16 @@
+.how-section {
+  padding-bottom: clamp(50px, 5.812vw, 68px);
+  display: block;
+  overflow: hidden;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(25px, 2.3932vw, 28px);
+  }
+
+  .title {
+    line-height: 118%;
+    font-family: var(--second-family);
+  }
+}

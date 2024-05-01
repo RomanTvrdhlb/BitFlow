@@ -1,0 +1,223 @@
+.step-card {
+  @include gradient-border(var(--gr-m), 1px);
+  background: linear-gradient(180deg, rgba(21, 19, 45, 0) 0%, #15132d 100%);
+  border-radius: 21px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: 14px;
+  height: 100%;
+  min-height: 339px;
+
+  @include for-mobile {
+    padding: clamp(25px, 3.0769vw, 36px);
+  }
+
+  @include mobile {
+    padding: clamp(25px, 3.0769vw, 36px) clamp(25px, 3.0769vw, 36px) 15px;
+  }
+
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='275' height='339' fill='none'%3E%3Cg filter='url(%23filter0_f_367_6224)'%3E%3Cellipse cx='300' cy='158.5' fill='url(%23paint0_linear_367_6224)' rx='175' ry='102.5'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_367_6224' x1='125' x2='496.226' y1='56' y2='107.25' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%236B76FE'/%3E%3Cstop offset='1' stop-color='%2353FFEC'/%3E%3C/linearGradient%3E%3Cfilter id='filter0_f_367_6224' width='600' height='455' x='0' y='-69' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_367_6224' stdDeviation='62.5'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: Min(23.5043vw, 275px);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__title,
+  &__subtitle,
+  p {
+    @include for-tablet {
+      max-width: Min(26.0684vw, 305px);
+    }
+
+    @include tablet {
+      @include for-mobile {
+        max-width: Min(53.711vw, 550px);
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 9px;
+    z-index: 2;
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include for-tablet {
+      width: Min(17.8632vw, 209px);
+      height: Min(26.4103vw, 309px);
+    }
+
+    @include tablet {
+      @include for-mobile {
+        width: clamp(156px, 20.41vw, 209px);
+        height: clamp(231px, 30.176vw, 309px);
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+      height: auto;
+      margin: 15px 0 calc(clamp(25px, 3.0769vw, 36px) * -1);
+      position: relative;
+      bottom: 0;
+      align-self: flex-end;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 14px;
+    margin-left: clamp(25px, 3.0769vw, 36px);
+  }
+
+  .main-btn {
+    margin-top: 4px;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  &__subtitle {
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 150%;
+    background: var(--gr-d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__title {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: clamp(24px, 2.6496vw, 31px);
+    line-height: 113%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &.count {
+    align-items: center;
+    @include for-mobile {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    @include mobile {
+      grid-gap: 24px;
+      padding: clamp(25px, 3.0769vw, 36px);
+    }
+
+    &::after {
+      right: -25px;
+    }
+
+    .step-card__box {
+      margin: 0;
+    }
+
+    .card {
+      @include for-laptop {
+        margin-right: Min(0.8547vw, 10px);
+      }
+    }
+  }
+
+  &--mode {
+    align-items: center;
+    grid-gap: 20px;
+    padding: 0 clamp(25px, 3.0769vw, 36px);
+
+    @include for-small-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet{
+      align-items: flex-start;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .step-card {
+      &__box {
+        padding: clamp(25px, 3.0769vw, 36px) 0;
+
+        @include small-tablet{
+        margin: 0;
+        width: 100%;
+        }
+        
+
+        .main-btn{
+        @include mobile{
+        max-width: 100%;
+        }
+        }
+      }
+
+      &__image {
+        align-self: end;
+        grid-row: 1;
+        width: initial;
+        height: initial;
+        right: initial;
+        bottom: initial;
+        position: relative;
+
+        @include mobile{
+        margin: 0;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          z-index: -1;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='682' height='466' fill='none'%3E%3Cg filter='url(%23filter0_f_367_6259)'%3E%3Cellipse cx='340.868' cy='233' fill='url(%23paint0_linear_367_6259)' rx='209' ry='101'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_367_6259' x1='131.868' x2='571.363' y1='132' y2='205.539' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%236B76FE'/%3E%3Cstop offset='1' stop-color='%2353FFEC'/%3E%3C/linearGradient%3E%3Cfilter id='filter0_f_367_6259' width='681.4' height='465.4' x='0.168167' y='0.300003' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_367_6259' stdDeviation='65.85'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+          left: 50%;
+          transform: translateX(-55%);
+          background-position: top center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          pointer-events: none;
+
+          @include for-small-tablet {
+            top: -40%;
+            width: Min(58.2906vw, 682px);
+            height: Min(39.8291vw, 466px);
+          }
+
+          @include small-tablet {
+            top: -25%;
+            width: Min(88.802vw, 682px);
+            height: Min(60.677vw, 466px);
+          }
+        }
+      }
+    }
+  }
+}

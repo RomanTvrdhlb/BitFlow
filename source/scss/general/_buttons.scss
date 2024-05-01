@@ -24,5 +24,27 @@
     background: var(--gr-j);
   }
 
+  &--app{
+    background: var(--gr-j);
+    height: 46px;
+    font-size: 14px;
+    grid-gap: 5px;
+
+    @include for-tablet{
+      width: 231px;
+    }
+
+    @include tablet{
+      @include for-small-tablet{
+        width: clamp(194px, 22.559vw, 231px);
+      }
+    }
+
+    @include small-tablet{
+      max-width: 100%;
+    }
+
+   
+  }
 }
 

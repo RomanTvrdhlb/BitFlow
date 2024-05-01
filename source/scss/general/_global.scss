@@ -194,6 +194,10 @@ fieldset {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--container-offset);
+
+  &--mode{
+    max-width: var(--container-width-mode);
+  }
 }
 
 // .swiper-container {

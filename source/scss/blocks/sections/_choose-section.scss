@@ -36,5 +36,7 @@
     }
 
 
-
+    &--mode{
+        padding-bottom: clamp(50px, 5.812vw, 68px);
+    }
 }

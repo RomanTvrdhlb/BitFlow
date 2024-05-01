@@ -1,0 +1,214 @@
+.card {
+    width: 161px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  
+    &__btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 7px;
+    }
+  
+  
+  
+    &__btn {
+      position: relative;
+      z-index: 1;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(32, 28, 70, 0) 0%, #201c46 100%);
+      border-radius: 8px;
+      transition: all .4s ease;
+      @include gradient-border(linear-gradient(37deg, rgba(41, 35, 92, 0) 0%, #29235c 100%), 1px);
+   
+      &:hover{
+        background: linear-gradient(180deg, #2a2758 0%, #2a2758 100%);
+      }
+
+      svg{
+        pointer-events: none;
+      }
+    }
+
+    &__box{
+        rotate: 21deg;
+        position: absolute;
+        top: 0;
+        left: -3px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__arrow{
+        width: 100%;
+        height: 100%;
+        background-image: var(--speed-arrow);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: 100% 100%;
+        background-position: center center;
+        pointer-events: none;
+        transition: all .2s ease-out;
+    }
+  
+    &__speed {
+      width: 160px;
+      height: 160px;
+      background-color: var(--bg-c);
+      border-radius: 50%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 2px;
+      text-align: center;
+      flex-direction: column;
+      background-image: url(../img/speed.png);
+      background-size: 100% 100%;
+      background-position: center center;
+      position: relative;
+
+      &::after{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='107' height='108' fill='none'%3E%3Ccircle cx='53.4455' cy='53.9999' r='53.4455' fill='url(%23paint0_radial_2001_3207)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_2001_3207' cx='0' cy='0' r='1' gradientTransform='rotate(90 -.2772 53.7227) scale(53.4455)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.61754' stop-color='%233F435A' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%233F435A' stop-opacity='0.3'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        z-index: -1;
+      }
+ 
+  
+      &-value {
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: 28px;
+        color: rgba(var(--cl-g),1.0);
+      }
+  
+      &-descr {
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        color: rgba(var(--cl-h),1.0);
+      }
+    }
+  
+  
+   
+  }
+  
+  
+  [data-speed] {
+    position: relative;
+  
+    &::before {
+      pointer-events: none;
+      width: calc(100% + 30px);
+      height: calc(100% + 30px);
+      position: absolute;
+      z-index: 2;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all .3s ease-out;
+    }
+  }
+
+  [data-speed="0"]{
+    .card__arrow{
+        opacity: 0;
+    }
+  }
+  
+  [data-speed="5"]::before {
+    background-image: url(../img/speed-arrow/speed5.svg);
+  }
+  [data-speed="10"]::before {
+    background-image: url(../img/speed-arrow/speed10.svg);
+  }
+  [data-speed="15"]::before {
+    background-image: url(../img/speed-arrow/speed15.svg);
+  }
+  [data-speed="20"]::before {
+    background-image: url(../img/speed-arrow/speed20.svg);
+  }
+  [data-speed="25"]::before {
+    background-image: url(../img/speed-arrow/speed25.svg);
+  }
+  [data-speed="30"]::before {
+    background-image: url(../img/speed-arrow/speed30.svg);
+  }
+  [data-speed="35"]::before {
+    background-image: url(../img/speed-arrow/speed35.svg);
+  }
+  [data-speed="40"]::before {
+    background-image: url(../img/speed-arrow/speed40.svg);
+  }
+  [data-speed="45"]::before {
+    background-image: url(../img/speed-arrow/speed45.svg);
+  }
+  [data-speed="50"]::before {
+    background-image: url(../img/speed-arrow/speed50.svg);
+  }
+  [data-speed="55"]::before {
+    background-image: url(../img/speed-arrow/speed55.svg);
+  }
+  [data-speed="60"]::before {
+    background-image: url(../img/speed-arrow/speed60.svg);
+  }
+  [data-speed="65"]::before {
+    background-image: url(../img/speed-arrow/speed65.svg);
+  }
+  [data-speed="70"]::before {
+    background-image: url(../img/speed-arrow/speed70.svg);
+  }
+  [data-speed="75"]::before {
+    background-image: url(../img/speed-arrow/speed75.svg);
+  }
+  [data-speed="80"]::before {
+    background-image: url(../img/speed-arrow/speed80.svg);
+  }
+  [data-speed="85"]::before {
+    background-image: url(../img/speed-arrow/speed85.svg);
+  }
+  [data-speed="90"]::before {
+    background-image: url(../img/speed-arrow/speed90.svg);
+  }
+  [data-speed="95"]::before {
+    background-image: url(../img/speed-arrow/speed95.svg);
+  }
+  [data-speed="100"]::before {
+    background-image: url(../img/speed-arrow/speed100.svg);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

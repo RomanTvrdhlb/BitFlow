@@ -1,0 +1,23 @@
+.step-list{
+    display: grid;
+   
+    grid-gap: 20px;
+
+    @include for-tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet{
+        grid-template-columns: 100%;
+    }
+
+    &__item{
+
+        &--mode{
+            @include for-tablet{
+            grid-column: span 2;
+            }
+        }
+    }
+
+}

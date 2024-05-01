@@ -7,6 +7,7 @@ import './components/tabs';
 import './components/burger';
 import './components/modals';
 import './components/select';
+import './components/card';
 
 
 

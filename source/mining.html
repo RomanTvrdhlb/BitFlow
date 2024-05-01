@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-mining.html')
+  <!--@include('partials/header-user.html')-->
+
+  <main>
+
+    <section class="first-section first-section--mining circles">
+      <div class="first-section__bg">
+        <video src="./img/mining/conveyor.mp4" playsinline muted autoplay loop></video>
+      </div>
+      <div class="container">
+        <div class="first-section__box">
+          <div class="first-section__top">
+            <h1 class="title">Cloud <span>mining</span></h1>
+            <span class="first-section__bonus">
+              <img width="31" height="31" src="./img/sprite/gift.svg" alt="image">
+              Sign up and get $4,5 bonus
+            </span>
+          </div>
+          <button class="main-btn">Start now
+            <svg width='19' height='14'>
+              <use href='img/sprite/sprite.svg#arrow-r'></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="choose-section choose-section--mode">
+      <div class="container">
+        <div class="choose-section__box">
+          <h2 class="title">why choose<br>
+            <img width="115" height="71" src="./img/sprite/icon1.svg" alt="image">our staking
+          </h2>
+
+          <ul class="choose-list">
+            <li class="choose-list__item">
+              <div class="choose-card">
+                <div class="choose-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/staking/img1.webp'>
+                    <img width='266' height='220' src='img/staking/img1.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="choose-card__box">
+                  <span class="choose-card__title">Easy to use</span>
+                  <p>With Binance cloud mining, becoming a miner is surprisingly easy.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="choose-list__item">
+              <div class="choose-card">
+                <div class="choose-card__image choose-card__image--mode">
+                  <picture>
+                    <source type='image/webp' srcset='img/staking/img2.webp'>
+                    <img width='282' height='211' src='img/staking/img2.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="choose-card__box">
+                  <span class="choose-card__title">Modern equipment</span>
+                  <p>Transparent and real hashrate.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="choose-list__item">
+              <div class="choose-card">
+                <div class="choose-card__image choose-card__image--mining">
+                  <picture>
+                    <source type='image/webp' srcset='img/staking/img3.webp'>
+                    <img width='264' height='234' src='img/staking/img3.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="choose-card__box">
+                  <span class="choose-card__title">Artificial intelligence</span>
+                  <p>Premium mining sites and a professional operation and maintenance team.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <seciton class="how-section">
+      <div class="container">
+        <div class="how-section__box">
+          <h3 class="title">how it works?</h3>
+
+          <ul class="step-list">
+            <li class="step-list__item">
+              <div class="step-card">
+                <span class="step-card__subtitle">FIRST STEP</span>
+                <span class="step-card__title">Sign in & Top up the balance</span>
+                <p>Easy registration for Web2 and Web3 users via email without any risks of Connecting your wallet to
+                  other platforms.</p>
+
+                <div class="step-card__image">
+                  <picture>
+                    <source type='image/webp' media='(max-width: 575px)' srcset='img/mining/img1Mob.webp'>
+                    <source media='(max-width: 575px)' srcset='img/mining/img1Mob.png'>
+                    <source type='image/webp' srcset='img/mining/img2.webp'>
+                    <img width='367' height='309' src='img/mining/img2.png' alt='image'>
+                  </picture>
+                </div>
+              </div>
+            </li>
+
+            <li class="step-list__item">
+              <div class="step-card count">
+                <div class="step-card__box">
+                  <span class="step-card__subtitle">SECOND STEP</span>
+                  <span class="step-card__title">Choose crypto & distribute the power</span>
+                  <p>Distribute the power according to your preferences and goals among available PoS currencies. You
+                    can purchase 1 Mh/s of hashpower for just $0.17 or its equivalent in crypto.</p>
+                </div>
+                <div class="card">
+                  <div class="card__speed" data-speed="95">
+                    <div class="card__box">
+                      <span class="card__arrow"></span>
+                    </div>
+                    <span class="card__speed-value">
+                      90%
+                    </span>
+                    <span class="card__speed-descr">
+                      GPU used
+                    </span>
+                  </div>
+
+                  <div class="card__btns">
+                    <button class="card__btn card__btn--plus">
+                      <span>
+                        <svg width='17' height='17'>
+                          <use href='img/sprite/sprite.svg#pl'></use>
+                        </svg>
+                      </span>
+                    </button>
+
+                    <button class="card__btn card__btn--minus">
+                      <span>
+                        <svg width='17' height='17'>
+                          <use href='img/sprite/sprite.svg#minus'></use>
+                        </svg>
+                      </span>
+                    </button>
+
+                    <button class="card__btn card__btn--refresh">
+                      <span>
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#refresh'></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step-list__item step-list__item--mode">
+              <div class="step-card step-card--mode">
+                <div class="step-card__box">
+                  <span class="step-card__subtitle">THIRD STEP</span>
+                  <span class="step-card__title">Earn & claim dividends</span>
+                  <p>Earn up to 5% daily in the most popular cryptocurrency.</p>
+                  <button class="main-btn main-btn--mode">Start mining</button>
+                </div>
+
+                <div class="step-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/mining/img1.webp'>
+                    <img width='537' height='584' src='img/mining/img1.png' alt='image'>
+                  </picture>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </seciton>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-section__box">
+          <h5 class="faq-section__title title">FAQ</h5>
+          <div class="faq-section__col">
+            <ul class='main-acc' data-single='true' data-breakpoint='576' data-accordion-init>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='1'>
+                  WHAT IS BIFLOW.IO?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='1'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='2'>
+                  HOW CAN I CALCULATE MY DAILY PROFIT MYSELF?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='2'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='3'>
+                  HOW CAN I EARN ON THE BIFLOW PLATFORM?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='3'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='4'>
+                  HOW TO MAKE A DEPOSIT?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='4'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='5'>
+                  HOW DO I ACTIVATE MINING AFTER THE DEPOSIT?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='5'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class='main-acc' data-single='true' data-breakpoint='576' data-accordion-init>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='1'>
+                  HOW DO I EXCHANGE BONUS REWARDS FROM MY REFERRAL FOR POWER?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='1'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='2'>
+                  HOW DO I WITHDRAW FUNDS TO MY WALLET ADDRESS?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='2'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='3'>
+                  HOW QUICKLY WITHDRAWAL IS PROCESSED?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='3'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='4'>
+                  WHICH CURRENCIES DOES THE BIFLOW PLATFORM SUPPORT?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='4'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='5'>
+                  WHAT IS THE PRICE FOR ONE UNIT OF HASHPOWER (MH/S)?
+                  <span class="main-acc__btn-icon">
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='5'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='6'>
+                  IS THERE A MINIMUM DEPOSIT AMOUNT?
+                  <span class="main-acc__btn-icon">
+
+                    <img width='10' height='6' src="./img/sprite/angle-d.svg" alt="image">
+                  </span>
+                </button>
+                <div class='main-acc__content' data-content='6'>
+                  <div class="main-acc__box">
+                    <p>Use "Profit Calculator" to calculate your daily profit. Just select the crypto, specify the
+                      investment amount and the number of days you want to calculate your profit. Receive the
+                      calculation result immediately!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>
