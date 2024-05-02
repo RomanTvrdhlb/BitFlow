@@ -198,6 +198,12 @@ fieldset {
   &--mode{
     max-width: var(--container-width-mode);
   }
+
+  &--dash {
+    // margin: 0;
+    max-width: calc(1325px + (clamp(16px, 1.6239vw, 19px) * 2));
+    padding: 0 clamp(16px, 1.6239vw, 19px);
+  }
 }
 
 // .swiper-container {
@@ -214,7 +220,7 @@ fieldset {
   transition: max-height 0.2s;
 }
 
-[data-tab-content] {
+[data-tab-content], [data-inner-content] {
   display: none;
 
   &.active {

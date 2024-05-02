@@ -1,0 +1,5 @@
+.deposit-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-gap: clamp(16px, 1.3585vw, 18px);
+}

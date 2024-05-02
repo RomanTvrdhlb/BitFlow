@@ -1,3 +1,6 @@
+import {toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray, fadeIn, fadeOut, addCustomClass} from '../functions/customFunctions';
+
+
 const cards = document.querySelectorAll('.card');
 
 cards && cards.forEach(function(card){
@@ -58,3 +61,58 @@ cards && cards.forEach(function(card){
       
     // }
 })
+
+const dashCards = document.querySelectorAll('.dashboard-card');
+
+dashCards && dashCards.forEach(function(card){
+    const btn = card.querySelector('.dashboard-card__btn');
+    const close = card.querySelector('.dashboard-card__close');
+    const menu = card.querySelector('.dashboard-card__wrapp');
+
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        addCustomClass(menu, 'active');
+    })
+
+    close.addEventListener('click', function(e){
+        e.preventDefault();
+        removeCustomClass(menu, 'active');
+    })
+})
+
+const copyCards = document.querySelectorAll('.deposit-card');
+
+copyCards && copyCards.forEach(function(card){
+    const generateBtn = card.querySelector('.deposit-card__btn');
+    const form = card.querySelector('.main-copy');
+    const formInput = form.querySelector('input').value;
+    const copyBtn = form.querySelector('.main-copy__btn');
+
+    generateBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        addCustomClass(form, 'active');
+    })
+})
+
+const copyForms = document.querySelectorAll('.main-copy');
+
+copyForms && copyForms.forEach(function(form){
+    const formInput = form.querySelector('input');
+    const copyBtn = form.querySelector('.main-copy__btn');
+
+    copyBtn.addEventListener('click', function(e){
+        e.preventDefault();
+
+        const value = formInput.value;
+
+        navigator.clipboard.writeText(value)
+        .then(() => {
+            formInput.value = 'Link copied!';
+            formInput.style.color = '#53FFEC';
+        })
+        .catch(err => {
+            formInput.value = 'Error copied!';
+            formInput.style.color = '#F62C2C';
+        });
+    });
+});

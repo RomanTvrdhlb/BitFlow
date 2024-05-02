@@ -14,10 +14,10 @@
 
   &__box {
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(21, 19, 45, 0) 0%, #15132d 100%);
+    background: var(--gr-l);
     border-radius: 21px;
     @include gradient-border(
-      linear-gradient(353deg, rgba(36, 32, 79, 0) 0%, #26225d 100%),
+        var(--gr-r),
       1px
     );
 

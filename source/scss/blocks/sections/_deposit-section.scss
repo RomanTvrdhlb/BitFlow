@@ -1,0 +1,39 @@
+.deposit-section{
+    padding-bottom: clamp(50px, 5.1321vw, 68px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 3.1698vw, 42px);
+    }
+
+    &__top{
+        grid-gap: 15px 20px;
+        display: flex;
+
+        @include for-mobile{
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @include mobile{
+            flex-direction: column;
+
+            .search{
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: clamp(30px, 2.6415vw, 35px);
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 2.1132vw, 28px);
+    }
+}

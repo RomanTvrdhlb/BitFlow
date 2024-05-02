@@ -1,0 +1,48 @@
+.aside-info {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(15px, 2.1368vw, 25px);
+  position: relative;
+    z-index: 2;
+    width: 100%;
+
+  &::before{
+    width: calc(100% + 35px);
+    right: -17px;
+    background: var(--gr-q);
+    height: 110%;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: calc(clamp(15px, 1.8803vw, 22px) * -1);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5px 10px;
+    align-items: center;
+  }
+
+  &__icon {
+    grid-row: span 2;
+    width: 34px;
+    height: 34px;
+    background: rgba(var(--bg-k),1.0);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(var(--cl-i),1.0);
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

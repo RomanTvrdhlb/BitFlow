@@ -1,0 +1,167 @@
+.deposit-card{
+    padding: 19px clamp(20px, 1.8113vw, 24px) clamp(20px, 1.8868vw, 25px);
+    background: linear-gradient(180deg, rgba(15, 13, 33, 0) 0%, rgba(25, 22, 60, 0.52) 100%);
+    border-radius: 12px;
+    @include gradient-border(linear-gradient(200deg, #201c46 0%, rgba(32, 28, 70, 0) 100%), 1px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+
+    .main-copy{
+        position: absolute;
+        bottom: clamp(20px, 1.8868vw, 25px);
+        left: clamp(20px, 1.8113vw, 24px);
+        right: clamp(20px, 1.8113vw, 24px);
+        z-index: 5;
+        transition: all .1s ease-out;
+        opacity: 0;
+        visibility: hidden;
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__top{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px clamp(8px, .7547vw, 10px);
+        align-items: end;
+    }
+
+    &__btn{
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 13px 14px 18px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #201c46 0%, rgba(32, 28, 70, 0) 100%);
+        @include gradient-border(linear-gradient(37deg, #29235c 0%, rgba(41, 35, 92, 0) 100%), 1px);
+        z-index: 1;
+
+        &::after{
+            position: absolute;
+            content: '';
+            inset: 0;
+            transition: all .3s;
+            background: linear-gradient(180deg, #2a2758 0%, rgba(42, 39, 88, 0.65) 100%);
+            border-radius: inherit;
+            z-index: -2;
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        span{
+            position: absolute;
+            content: '';
+            inset: 0;
+            transition: all .3s;
+            background: linear-gradient(180deg, rgba(42, 39, 88, 0) 0%, rgba(42, 39, 88, 0.25) 100%);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        &:hover{
+           &::after{
+            opacity: 1;
+            visibility: visible;
+           }
+        }
+
+        &:focus{
+            &::after{
+                opacity: 0;
+                visibility: hidden;
+            }
+            span{
+                visibility: visible;
+                opacity: 1;
+               }
+        }
+
+        &:disabled{
+            opacity: 0.4;
+        }
+    }
+
+    &__name{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: #c0c0ff;
+        opacity: 0.5;
+        align-self: start;
+    }
+
+    &__title{
+   
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 16px;
+        color: #f0f3f7;
+    }
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: span 2;
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        background-color: rgba(227, 127, 6, .16);
+        position: relative;
+        z-index: 1;
+        // background-color: #e37f06;
+        svg, img{
+            width: 45px;
+            aspect-ratio: 1;
+        }
+
+        &--green{
+            background-color: rgba(236, 239, 240, .16);
+        }
+
+        &--blue{
+            background: rgba(3, 130, 209, .16);
+        }
+
+        &--red{
+            background: rgba(255, 6, 10, .16);
+        }
+
+        &--orange{
+            background: rgba(240, 5, 0, 0.16);
+        }
+
+        &--violet{
+            background: rgba(130, 71, 229, .16);
+        }
+
+        &--mode{
+            background: rgba(252, 252, 253, .16);
+        }
+
+        &--silver{
+            background: rgba(246, 246, 246, .16);
+        }
+
+        &-mini{
+            z-index: 2;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

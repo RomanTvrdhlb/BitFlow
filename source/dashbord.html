@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  <!--@include('partials/header-user.html')-->
+
+  <main>
+    <div class="container container--dash">
+      <div class="dashboard" data-tabs-parrent>
+        <button class="dashboard-burger">
+          <svg width='28' height='28'>
+            <use href='img/sprite/sprite.svg#menu'></use>
+          </svg>
+        </button>
+        <aside class="dashboard-aside">
+
+          <ul class="aside-info">
+            <li class="aside-info__item">
+              <span class="aside-info__icon">
+                <img width="24" height="24" src="img/sprite/star.svg" alt="icon">
+              </span>
+              <span class="aside-info__name">Your level:</span>
+              <span class="aside-info__value">2</span>
+            </li>
+            <li class="aside-info__item">
+              <span class="aside-info__icon">
+                <img width="24" height="24" src="img/sprite/active.svg" alt="icon">
+              </span>
+              <span class="aside-info__name">Your balance:</span>
+              <span class="aside-info__value">25,945,92.02 MH/s</span>
+            </li>
+          </ul>
+
+          <ul class="aside-nav">
+            <li class="aside-nav__item">
+              <button class="aside-nav__button active" type="button" data-tab="Dashboard">
+                <span class="aside-nav__icon icon-dashboard">
+                  <img width="24" height="24" src="img/sprite/dash.svg" alt="icon">
+                </span>
+                Dashboard
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Deposit">
+                <span class="aside-nav__icon icon-deposit">
+                  <img width="24" height="24" src="img/sprite/dash2.svg" alt="icon">
+                </span>
+                Deposit
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Withdraw">
+                <span class="aside-nav__icon icon-withdraw">
+                  <img width="24" height="24" src="img/sprite/dash3.svg" alt="icon">
+                </span>
+                Withdraw
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Referral">
+                <span class="aside-nav__icon icon-refferal">
+                  <img width="24" height="24" src="img/sprite/dash4.svg" alt="icon">
+                </span>
+                Referral program
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="How">
+                <span class="aside-nav__icon icon-how">
+                  <img width="24" height="24" src="img/sprite/dash5.svg" alt="icon">
+                </span>
+                How to mine?
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Staking">
+                <span class="aside-nav__icon icon-setting">
+                  <img width="24" height="24" src="img/sprite/dash6.svg" alt="icon">
+                </span>
+                Staking <b class="green-text">up to 120%</b>
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Setting">
+                <span class="aside-nav__icon icon-setting">
+                  <img width="24" height="24" src="img/sprite/dash7.svg" alt="icon">
+                </span>
+                Setting
+              </button>
+            </li>
+            <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Exit">
+                <span class="aside-nav__icon icon-exit">
+                  <img width="24" height="24" src="img/sprite/dash8.svg" alt="icon">
+                </span>
+                Exit
+              </button>
+            </li>
+          </ul>
+        </aside>
+        <section class="dashboard-section active" data-tab-content="Dashboard">
+          <div class="dashboard-section__box" data-inner-parrent>
+            <div class="dashboard-top">
+              <span class="dashboard-top__lable">Top miners of cryptocurrency
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#rocket'></use>
+                </svg>
+              </span>
+              <div class="dashboard-top__box">
+                <h1 class="dashboard-top__title">
+                  <span class="dashboard-top__title-icon">
+                    <svg width='45' height='45'>
+                      <use href='img/sprite/sprite.svg#active'></use>
+                    </svg>
+                  </span>
+                  Dashboard
+                </h1>
+
+                <ul class="dashboard-top__list">
+                  <li class="dashboard-top__item">
+                    <span class="dashboard-top__icon">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#sack'></use>
+                      </svg>
+                    </span>
+                    <span class="dashboard-top__text">Porfolio value</span>
+                    <span class="dashboard-top__value">$ 10,922.87</span>
+                  </li>
+                  <li class="dashboard-top__item">
+                    <span class="dashboard-top__icon">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#sack'></use>
+                      </svg>
+                    </span>
+                    <span class="dashboard-top__text">Total profit</span>
+                    <span class="dashboard-top__value">$ 975.02</span>
+                  </li>
+                </ul>
+              </div>
+
+
+
+            </div>
+            <ul class="dashboard-nav">
+              <li class="dashboard-nav__item">
+                <button class="dashboard-nav__btn active" type="button" data-inner-tab="1">All miners</button>
+              </li>
+              <li class="dashboard-nav__item">
+                <button class="dashboard-nav__btn" type="button" data-inner-tab="2">My miners</button>
+              </li>
+            </ul>
+            <ul class="dashboard-section__content">
+              <li class="dashboard-section__content-item active" data-inner-content="1">
+                <ul class="dashboard-section__list">
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/btc.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">BTC</span>
+                          <span class="dashboard-card__name">Bitcoin</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>BTC</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="100">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card silver card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/eth.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">ETH</span>
+                          <span class="dashboard-card__name">Ethereum</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>ETH</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="65">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card silver card disable">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/xrp.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">XRP</span>
+                          <span class="dashboard-card__name">Ripple</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>XRP</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card silver card ">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/bnb.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">BNB</span>
+                          <span class="dashboard-card__name">Binace coin</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>BNB</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card orange card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/xmr.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">XMR</span>
+                          <span class="dashboard-card__name">Manero</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>XMR</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card blue card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/dash.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">DASH</span>
+                          <span class="dashboard-card__name">DASH</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>DASH</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card violet card ">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/matic.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">Matic</span>
+                          <span class="dashboard-card__name">Matic</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>MATIK</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card gold card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/zec.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">ZEC</span>
+                          <span class="dashboard-card__name">ZCash</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>ZEC</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card silver card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/usdt.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">USDT</span>
+                          <span class="dashboard-card__name">Tether</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>USDT</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card pink card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/dot.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">DOT</span>
+                          <span class="dashboard-card__name">Polkadot</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>DOT</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card green card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/etc.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">ETC</span>
+                          <span class="dashboard-card__name">Ethereum Classic</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>ETC</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card white card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/ada.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">ADA</span>
+                          <span class="dashboard-card__name">Cardano</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>ADA</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card lightblue card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/link.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">LINK</span>
+                          <span class="dashboard-card__name">Chainlink</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>LINK</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card red card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/shib.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">SHIB</span>
+                          <span class="dashboard-card__name">Shiba</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>SHIB</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card mode card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/ltc.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">LTC</span>
+                          <span class="dashboard-card__name">Litecoin</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>LTC</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card bronze card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/doge.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">Doge</span>
+                          <span class="dashboard-card__name">Dogecoin</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>DOGE</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card red card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/trx.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">TRX</span>
+                          <span class="dashboard-card__name">Tron</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>TRX</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card lightgreen card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/bch.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">BCH</span>
+                          <span class="dashboard-card__name">Bitcoin Cash</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>BTH</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="0">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="dashboard-section__content-item" data-inner-content="2">
+                <ul class="dashboard-section__list">
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card bronze card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/doge.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">Doge</span>
+                          <span class="dashboard-card__name">Dogecoin</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>DOGE</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="90">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card red card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/trx.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">TRX</span>
+                          <span class="dashboard-card__name">Tron</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>TRX</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="35">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dashboard-section__item">
+                    <div class="dashboard-card lightgreen card">
+                      <div class="dashboard-card__box">
+                        <div class="dashboard-card__top">
+                          <span class="dashboard-card__icon">
+                            <img width="24" height="24" src="./img/icons/bch.svg" alt="icon">
+                          </span>
+                          <span class="dashboard-card__title">BCH</span>
+                          <span class="dashboard-card__name">Bitcoin Cash</span>
+                        </div>
+                        <button class="dashboard-card__btn">0.00000000 <b>BTH</b>
+                          <svg width='10' height='5'>
+                            <use href='img/sprite/sprite.svg#angle-down'></use>
+                          </svg>
+                        </button>
+                        <div class="card__btns">
+                          <button class="card__btn card__btn--plus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#pl'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--minus">
+                            <span>
+                              <svg width='17' height='17'>
+                                <use href='img/sprite/sprite.svg#minus'></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <button class="card__btn card__btn--refresh">
+                            <span>
+                              <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#refresh'></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card__speed" data-speed="80">
+                        <div class="card__box">
+                          <span class="card__arrow"></span>
+                        </div>
+                        <span class="card__speed-value">
+                          90%
+                        </span>
+                        <span class="card__speed-descr">
+                          GPU used
+                        </span>
+                      </div>
+
+                      <div class="dashboard-card__wrapp">
+                        <button class="dashboard-card__close">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#close'></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dashboard-card__list">
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Hour:</span>
+                            <span class="dashboard-card__value">0.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 3 Month:</span>
+                            <span class="dashboard-card__value">35.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Day:</span>
+                            <span class="dashboard-card__value">0.03727383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per 6 Month:</span>
+                            <span class="dashboard-card__value">70.00027383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Month:</span>
+                            <span class="dashboard-card__value">11.00327383 ETH</span>
+                          </li>
+                          <li class="dashboard-card__item">
+                            <span class="dashboard-card__text">Per Year:</span>
+                            <span class="dashboard-card__value">999999.0002738 ETH</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="deposit-section" data-tab-content="Deposit">
+          <div class="deposit-section__box">
+            <div class="dashboard-top">
+              <h2 class="dashboard-top__title">
+                <span class="dashboard-top__title-icon">
+                  <svg width='45' height='45'>
+                    <use href='img/sprite/sprite.svg#wallet'></use>
+                  </svg>
+                </span>
+                Deposit
+              </h2>
+
+              <div class="dashboard-top__inner">
+                <span class="dashboard-top__image">
+                  <svg width='45' height='45'>
+                    <use href='img/sprite/sprite.svg#alert'></use>
+                  </svg>
+                </span>
+                <p>This section presents various payment systems designed for your convenience. Here you can explore
+                  different options and choose the optimal format for making deposits. </p>
+              </div>
+            </div>
+
+            <div class="deposit-section__inner">
+              <div class="deposit-section__top">
+                <span class="deposit-section__title">Choose currency</span>
+
+                <form class="search">
+                  <label for="search" class="search__label">
+                    <input class="search__input" type="text" name="search" id="search" placeholder="Search">
+                    <span class="search__border"></span>
+                    <button class="search__btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#search'></use>
+                      </svg>
+                    </button>
+                  </label>
+                </form>
+              </div>
+
+              <ul class="deposit-list">
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon">
+                        <img width="45" height="45" src="./img/icons/btc2.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">BTC</span>
+                      <span class="deposit-card__name">Bitcoin</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--silver">
+                        <img width="45" height="45" src="./img/icons/eth.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">ETH</span>
+                      <span class="deposit-card__name">Ethereum</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--mode">
+                        <img width="45" height="45" src="./img/icons/xrp2.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">XRP</span>
+                      <span class="deposit-card__name">Ripple</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon">
+                        <img width="45" height="45" src="./img/icons/bnb2.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">BNB</span>
+                      <span class="deposit-card__name">Binance Coin</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon">
+                        <img width="45" height="45" src="./img/icons/xmr2.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">XMR</span>
+                      <span class="deposit-card__name">Manero</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--blue">
+                        <img width="45" height="45" src="./img/icons/dash2.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">DASH</span>
+                      <span class="deposit-card__name">Dash</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--violet">
+                        <img width="45" height="45" src="./img/icons/matic.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">MATIC</span>
+                      <span class="deposit-card__name">Matic</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon">
+                        <img width="45" height="45" src="./img/icons/zec.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">ZEC</span>
+                      <span class="deposit-card__name">Z Cash</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--green">
+                        <img width="45" height="45" src="./img/icons/usdt.svg" alt="icon">
+                        <b class="deposit-card__icon-mini"><img width="24" height="24" src="./img/icons/protocol3.svg" alt="icon"></b>
+                      </span>
+                      <span class="deposit-card__title">USDT</span>
+                      <span class="deposit-card__name">USDT BEP-20</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--green">
+                        <img width="45" height="45" src="./img/icons/usdt.svg" alt="icon">
+                        <b class="deposit-card__icon-mini"><img width="24" height="24" src="./img/icons/protocol1.svg" alt="icon"></b>
+                      </span>
+                      <span class="deposit-card__title">USDT</span>
+                      <span class="deposit-card__name">USDT TRC-20</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--green">
+                        <img width="45" height="45" src="./img/icons/usdt.svg" alt="icon">
+                        <b class="deposit-card__icon-mini"><img width="24" height="24" src="./img/icons/protocol2.svg" alt="icon"></b>
+                      </span>
+                      <span class="deposit-card__title">USDT</span>
+                      <span class="deposit-card__name">USDT Polygon</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--blue">
+                        <img width="45" height="45" src="./img/icons/ltc.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">LTC</span>
+                      <span class="deposit-card__name">Litecoin</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--blue">
+                        <img width="45" height="45" src="./img/icons/dash2.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">DASH</span>
+                      <span class="deposit-card__name">Dash</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon">
+                        <img width="45" height="45" src="./img/icons/busd.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">BUSD</span>
+                      <span class="deposit-card__name">Biance USD BEP2</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--red">
+                        <img width="45" height="45" src="./img/icons/trx.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">TRX</span>
+                      <span class="deposit-card__name">Tron</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon">
+                        <img width="45" height="45" src="./img/icons/doge.svg" alt="icon">
+                      </span>
+                      <span class="deposit-card__title">Doge</span>
+                      <span class="deposit-card__name">Dogecoin</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="deposit-list__item">
+                  <div class="deposit-card">
+                    <div class="deposit-card__top">
+                      <span class="deposit-card__icon deposit-card__icon--orange">
+                        <img width="45" height="45" src="./img/icons/shib.svg" alt="icon">
+                        
+                        <b class="deposit-card__icon-mini"><img width="24" height="24" src="./img/icons/protocol3.svg" alt="icon"></b>
+                      </span>
+                      <span class="deposit-card__title">SHIB</span>
+                      <span class="deposit-card__name">Shiba bep-20</span>
+                    </div>
+                    <div class="deposit-card__bottom">
+                      <button class="deposit-card__btn">Generate address
+                        <span></span>
+                      </button>
+
+                      <form class="main-copy">
+                        <input disabled value="0xaf79d897be0111111" type="text" name="copy" id="copy" class="main-copy__input">
+                        <button class="main-copy__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#copy'></use>
+                          </svg>
+                          <span></span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="withdraw-section" data-tab-content="Withdraw">
+          <div class="withdraw-section__box">
+            <div class="dashboard-top">
+              <h2 class="dashboard-top__title">
+                <span class="dashboard-top__title-icon">
+                  <svg width='45' height='45'>
+                    <use href='img/sprite/sprite.svg#wallet'></use>
+                  </svg>
+                </span>
+                Withdraw
+              </h2>
+
+              <div class="dashboard-top__inner">
+                <span class="dashboard-top__image">
+                  <svg width='45' height='45'>
+                    <use href='img/sprite/sprite.svg#alert'></use>
+                  </svg>
+                </span>
+                <p>In this section, we offer you convenient options for withdrawing funds or exchanging them. To withdraw funds, you need to select the desired currency, specify the amount, and provide your wallet address. Please note the minimum withdrawal amount for a successful transaction.</p>
+              </div>
+            </div>
+
+            <div class="withdraw-section__inner">
+              <div class="withdraw-section__top">
+                <span class="withdraw-section__title">Choose currency</span>
+
+                <form class="search">
+                  <label for="search" class="search__label">
+                    <input class="search__input" type="text" name="search" id="search" placeholder="Search">
+                    <span class="search__border"></span>
+                    <button class="search__btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#search'></use>
+                      </svg>
+                    </button>
+                  </label>
+                </form>
+              </div>
+
+              <ul class="withdraw-section__list">
+                <li class="withdraw-section__item">
+                  <div class="withdraw-row withdraw-row--head">
+                    <span class="withdraw-row__name">Coin</span>
+                    <span class="withdraw-row__name">Balance</span>
+                    <span class="withdraw-row__name">Action</span>
+                  </div>
+                </li>
+                <li class="withdraw-section__item">
+                  <div class="withdraw-row">
+                    <div class="withdraw-row__box">
+                      <span class="withdraw-row__icon">
+                        <img width='45' height='45' src="./img/icons/btc2.svg" alt="icon">
+                      </span>
+                      <span class="withdraw-row__title">BTC</span>
+                      <span class="withdraw-row__name">Bitcoin</span>
+                    </div>
+                    <span class="withdraw-row__value">0.00000000 <b>BTC</b></span>
+                    <div class="withdraw-row__btns">
+                      <button class="blue-btn">Withdraw
+                        <span></span>
+                      </button>
+                      <button class="blue-btn">Exchange for USDT
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="withdraw-section__item">
+                  <div class="withdraw-row">
+                    <div class="withdraw-row__box">
+                      <span class="withdraw-row__icon withdraw-row__icon--silver">
+                        <img width='45' height='45' src="./img/icons/eth.svg" alt="icon">
+                      </span>
+                      <span class="withdraw-row__title">ETH</span>
+                      <span class="withdraw-row__name">Ethereum</span>
+                    </div>
+                    <span class="withdraw-row__value">0.00000000 <b>ETH</b></span>
+                    <div class="withdraw-row__btns">
+                      <button class="blue-btn">Withdraw
+                        <span></span>
+                      </button>
+                      <button class="blue-btn">Exchange for USDT
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="withdraw-section__item">
+                  <div class="withdraw-row">
+                    <div class="withdraw-row__box">
+                      <span class="withdraw-row__icon withdraw-row__icon--mode">
+                        <img width='45' height='45' src="./img/icons/xrp2.svg" alt="icon">
+                      </span>
+                      <span class="withdraw-row__title">XRP</span>
+                      <span class="withdraw-row__name">Ripple</span>
+                    </div>
+                    <span class="withdraw-row__value">0.00000000 <b>XRP</b></span>
+                    <div class="withdraw-row__btns">
+                      <button class="blue-btn">Withdraw
+                        <span></span>
+                      </button>
+                      <button class="blue-btn">Exchange for USDT
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="withdraw-section__item">
+                  <div class="withdraw-row">
+                    <div class="withdraw-row__box">
+                      <span class="withdraw-row__icon">
+                        <img width='45' height='45' src="./img/icons/bnb2.svg" alt="icon">
+                      </span>
+                      <span class="withdraw-row__title">BNB</span>
+                      <span class="withdraw-row__name">Binance Coin</span>
+                    </div>
+                    <span class="withdraw-row__value">0.00000000 <b>BNB</b></span>
+                    <div class="withdraw-row__btns">
+                      <button class="blue-btn">Withdraw
+                        <span></span>
+                      </button>
+                      <button class="blue-btn">Exchange for USDT
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="withdraw-section__item">
+                  <div class="withdraw-row">
+                    <div class="withdraw-row__box">
+                      <span class="withdraw-row__icon withdraw-row__icon--orange">
+                        <img width='45' height='45' src="./img/icons/xmr2.svg" alt="icon">
+                      </span>
+                      <span class="withdraw-row__title">XMR</span>
+                      <span class="withdraw-row__name">Manero</span>
+                    </div>
+                    <span class="withdraw-row__value">0.00000000 <b>BNB</b></span>
+                    <div class="withdraw-row__btns">
+                      <button class="blue-btn">Withdraw
+                        <span></span>
+                      </button>
+                      <button class="blue-btn">Exchange for USDT
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+           
+            </div>
+          </div>
+
+
+        </section>
+        <section class="refferal-section" data-tab-content="Referral">
+          <div class="dashboard-top">
+            <h2 class="dashboard-top__label">
+              <span class="dashboard-top__icon icon-refferal"></span>
+              Referral program
+            </h2>
+
+
+
+          </div>
+
+        </section>
+
+        <section class="settings-section " data-tab-content="Setting">
+          <div class="dashboard-top">
+            <h2 class="dashboard-top__label">
+              <span class="dashboard-top__icon icon-setting"></span>
+              Setting
+            </h2>
+
+            <div class="dashboard-top__profile">
+              <button class="dashboard-top__notification active">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#bell'></use>
+                </svg>
+              </button>
+
+              <div class="dashboard-top__inner">
+                <div class="dashboard-top__user">
+                  <img width='50' height='50' src="img/sprite/user.svg" alt="icon">
+                </div>
+                Ronald Richards
+              </div>
+            </div>
+          </div>
+
+
+        </section>
+        <section class="exit-section" data-tab-content="Exit">
+          <div class="dashboard-top">
+            <h2 class="dashboard-top__label">
+              <span class="dashboard-top__icon icon-exit"></span>
+              Exit
+            </h2>
+            <div class="dashboard-top__profile">
+              <button class="dashboard-top__notification active">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#bell'></use>
+                </svg>
+              </button>
+
+              <div class="dashboard-top__inner">
+                <div class="dashboard-top__user">
+                  <img width='50' height='50' src="img/sprite/user.svg" alt="icon">
+                </div>
+                Ronald Richards
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- @include('partials/footer.html') -->
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>
