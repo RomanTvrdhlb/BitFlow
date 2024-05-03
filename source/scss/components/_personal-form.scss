@@ -1,0 +1,117 @@
+.personal-form{
+    display: grid;
+   
+    grid-gap: 16px;
+
+    @include for-small-tablet{
+        grid-template-columns: 1fr auto;
+    }
+
+    @include small-tablet{
+        grid-template-columns: 100%;
+    }
+
+    &__box{
+        display: grid;
+      
+        grid-gap: 13px clamp(15px, 1.5094vw, 20px);
+        background: var(--gradient-e);
+        border-radius: 21px;
+        @include gradient-border(var(--gr-r), 1px);
+        padding: clamp(30px, 3.0189vw, 40px) clamp(20px, 2.6415vw, 35px) clamp(35px, 3.3962vw, 45px);
+
+
+        @include for-mobile{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile{
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__pretitle{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: rgba(var(--cl-c),1.0);
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 4px;
+        position: relative;
+    }
+
+    &__icon{
+        display: block;
+        z-index: 2;
+        position: absolute;
+        right: 15px;
+        bottom: 25px;
+        transform: translateY(50%);
+    }
+
+    &__input{
+        background: rgba(var(--bg-f),1.0);
+        border-radius: 99px;
+        height: 50px;
+        padding: 10px 45px 10px 15px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: rgba(var(--cl-a),1.0);
+
+        &::placeholder{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            color: rgba(var(--cl-a),1.0);
+        }
+    }
+
+    &__user{
+        min-width: clamp(250px, 22.1132vw, 293px);
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        @include gradient-border(var(--gr-r), 1px);
+        background: var(--gradient-e);
+        border-radius: 21px;
+        padding: clamp(20px, 1.8113vw, 24px) clamp(20px, 2.6415vw, 35px) clamp(21px, 1.8868vw, 25px);
+
+        .blue-btn{
+           margin-top: 10px;
+        }
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(16px, 1.3585vw, 18px);
+    }
+
+    &__mail{
+        font-family: var(--second-family);
+        font-size: 14px;
+        color: rgba(var(--cl-c),1.0);
+        flex-grow: 1;
+    }
+
+    &__image{
+        border-radius: 12px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        margin-bottom: 4px;
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}

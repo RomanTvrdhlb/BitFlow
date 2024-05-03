@@ -1,33 +1,26 @@
-<header class="header fixed-block">
-  <div class="container">
+<header class="header dash fixed-block">
+  <div class="container container--dash">
       <div class="header__inner">
       <a href="/" class="logo">
         <img width="142" height="27" src="img/logo.png" alt="logo">
       </a>
 
-        <ul class="main-nav">
-          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Home</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Referral program</a></li>
-          <li class="main-nav__item"><a href="mining.html" class="main-nav__link active">Cloud mining</a></li>
-          <li class="main-nav__item"><a href="staking.html" class="main-nav__link">Staking</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Team</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__link">Docs</a></li>
-        </ul>
-  
-        <div class="header__btns">
-          <a class="header__btn">
-            Log In
+      <form class="search">
+        <label for="search_main" class="search__label">
+          <input class="search__input" type="text" name="search_main" id="search_main" placeholder="Search">
+          <span class="search__border"></span>
+          <button class="search__btn">
             <svg width='24' height='24'>
-              <use href='img/sprite/sprite.svg#login'></use>
+              <use href='img/sprite/sprite.svg#search'></use>
             </svg>
-          </a>
-          <a class="main-btn main-btn--mode">
-            Sign up
-            <svg width='24' height='24'>
-              <use href='img/sprite/sprite.svg#sign'></use>
-            </svg>
-          </a>
-        </div>
+          </button>
+        </label>
+      </form>
+
+      <div class="header__user">
+        <img width="35" height="35" src="./img/dash/user.png" alt="image" class="header__user-image">
+        <span class="header__name">vladnovsky123</span>
+      </div>
 
         <button class="burger">
           <span class="burger__line"></span>
@@ -44,9 +37,9 @@
               </div>
             </div>
             	<ul class="mobile__menu-list">
-                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/">Home</a></li>
                 <li><a href="#">Referral program</a></li>
-                <li><a class="active" href="mining.html">Cloud mining</a></li>
+                <li><a href="mining.html">Cloud mining</a></li>
                 <li><a href="staking.html">Staking</a></li>
                 <li><a href="#">Team</a></li>
                 <li><a href="#">Docs</a></li>

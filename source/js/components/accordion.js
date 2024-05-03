@@ -113,16 +113,25 @@ export const accInit = (accParrents, dataBtn, dataContent) => {
 
       if (accordionParrent.dataset.default) {
         defaultOpenSetting = accordionParrent.dataset.default;
-
         // получает id аккордиона который будет открыт по умолчанию
         accordionDefaultOpen(defaultOpenSetting);
       }
 
-
-
       activateAccordion(accordions, accordionClickHandler);
+
+      if (accordionParrent.classList.contains('how-acc')) {
+        const howAccContent = accordionParrent.querySelector(`[${dataContent}="1"]`);
+        if (howAccContent) {
+          howAccContent.style.maxHeight = "initial";
+        }
+      }
     }
   });
 };
 
 accInit([...document.querySelectorAll('[data-accordion-init]')], "data-id", "data-content");
+
+
+
+
+

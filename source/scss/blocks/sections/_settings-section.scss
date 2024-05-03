@@ -1,0 +1,32 @@
+.settings-section{
+    padding-bottom: clamp(50px, 5.1321vw, 68px);
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 3.3962vw, 45px);
+    }
+
+    .dashboard-top{
+        margin-bottom: clamp(10px, 1.283vw, 17px);
+    }
+
+
+    &__subtitle{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: clamp(30px, 2.6415vw, 35px);
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 2.6415vw, 35px);
+
+
+        &--mode{
+            grid-gap: clamp(25px, 2.2642vw, 30px);
+            margin-top: clamp(10px, 1.1321vw, 15px);
+        }
+    }
+}

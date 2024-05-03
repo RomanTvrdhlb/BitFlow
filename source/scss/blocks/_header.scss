@@ -7,11 +7,10 @@
   z-index: 90;
 
   @include tablet{
-    box-shadow: 0 10px 20px 0 #0b0a17;
     background-color: rgba(var(--bg-f),1);
   }
 
-  @include ios {
+  @include mobile {
     padding: 16px 0 12px;
   }
 
@@ -35,6 +34,10 @@
       opacity: 0;
       visibility: hidden;
     }
+  }
+
+  @include tablet{
+    box-shadow: 0 10px 20px 0 #0b0a17;
   }
   }
 
@@ -89,13 +92,12 @@
         display: none;
       }
 
-      @include for-ios {
+     
         grid-template-columns: auto 1fr auto;
-      }
+  
     }
 
     @include ios {
-      grid-template-columns: repeat(2, 1fr);
       .logo {
         width: 139px;
       }
@@ -105,11 +107,10 @@
   &__btns {
     transition: transform 0.45s cubic-bezier(0.6, 0.6, 0, 1),
       opacity 0.45s cubic-bezier(0.6, 0.6, 0, 1);
-    @include for-ios {
+   
       display: flex;
       align-items: center;
       grid-gap: 8px;
-    }
 
     .main-btn {
       font-family: var(--third-family);
@@ -132,24 +133,55 @@
         font-size: clamp(12px, 1.1966vw, 14px);
       }
 
-      @include ios {
-        width: 100%;
+      @include mobile{
+        font-size: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        padding: 5px;
+        min-width: initial;
+  
+        svg{
+          width: 24px;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
 
     @include laptop {
-      @include for-ios {
         justify-self: end;
-      }
     }
 
-    @include ios {
-      grid-column: span 2;
-      grid-row: 2;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 15px;
-      width: 100%;
+    * > {
+      @include for-mobile{
+        svg{
+          display: none;
+        }
+      }
+      
+    }
+
+    .header__btn{
+      @include mobile{
+        font-size: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        padding: 5px;
+  
+        svg{
+          width: 20px;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
     }
   }
 
@@ -181,18 +213,116 @@
     @include small-tablet {
       font-size: clamp(12px, 1.1966vw, 14px);
     }
+  }
 
-    @include ios {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  &__user{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    padding-left: 37px;
+    position: relative;
+    z-index: 1;
+    &-image{
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+      border-radius: 12px;
+      flex-shrink: 0;
     }
+
+    &::before{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: calc(100% + 35px);
+      background-color: var(--br-g);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @include small-tablet{
+      justify-self: end;
+      &::before{
+        display: none;
+      }
+    }
+  }
+
+  &__name{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
   }
 
   .logo {
     transition: transform 0.45s cubic-bezier(0.6, 0.6, 0, 1),
       opacity 0.45s cubic-bezier(0.6, 0.6, 0, 1);
+  }
+
+  &.dash{
+    background-color: rgba(var(--bg-f),1.0);
+    overflow: hidden;
+    padding: 0;
+    border-bottom: 1px solid var(--br-g);
+    .header__inner{
+     
+      padding: 19px 0 16px;
+      grid-gap: clamp(20px, 3.9316vw, 46px);
+
+      @include for-tablet{
+        grid-template-columns: 237px 1fr auto;
+      }
+
+      @include tablet{
+        grid-template-columns:125px 1fr auto auto;
+      }
+
+      @include for-small-tablet{
+        height: 80px;
+      }
+
+      @include small-tablet{
+        grid-template-columns: auto 1fr auto;
+
+        .search{
+          display: none;
+        }
+      }
+    }
+
+    .logo{
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &::before{
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: calc(100% + 35px);
+        background-color: var(--br-g);
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      @include small-tablet{
+        width: fit-content;
+        &::before{
+          display: none;
+        }
+      }
+    }
   }
 }
 

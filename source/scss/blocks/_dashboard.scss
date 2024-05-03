@@ -1,11 +1,12 @@
 .dashboard {
-  padding: 25px 0 0;
+  padding: clamp(35px, 3.3962vw, 45px) 0 0;
    display: grid;
   grid-template-columns: 237px calc(100% - 237px - clamp(20px, 3.9316vw, 46px));
   grid-gap: clamp(20px, 3.9316vw, 46px);
   align-items: flex-start;
 
   @include tablet {
+   
     grid-template-columns: 100%;
   }
 
@@ -25,30 +26,60 @@
     grid-gap: 10px;
     width: 100%;
   }
-}
 
 
+  &__btn{
+    @include gradient-border(var(--gr-r), 1px);
+    cursor: pointer;
+    position: fixed;
+    z-index: 38;
+    top: calc(var(--header-height) + 15px);
+    transform: translate(-25%, 50%);
+    left: clamp(16px, 1.6239vw, 19px);
+    transition: all 0.3s ease 0s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(var(--bg-f),1.0);
+    align-items: center;
+    justify-content: center;
 
-.dashboard-burger {
-  display: none;
-  position: absolute !important;
-  top: 40px;
-  // @include burger;
+    @include for-tablet{
+      display: none;
+    }
 
-  @include tablet {
-    display: block;
-  }
+    @include tablet{
+      display: flex;
+    }
 
-  &__line {
-    transition: all .4s;
-  }
+    &-wrapp{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(32, 28, 70, 0) 0%, #201c46 100%);
+      transition: all 0.3s ease 0s;
+      max-width: 45px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: 8px 8px;
+      grid-template-rows: 8px 8px;
+      gap: 3px;
+    }
 
-  &.active {
-    .dashboard-burger__line {
-      opacity: 0;
+    span{
+      transition: all 0.5s ease 0s;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #8a92bc;
+      border-radius: 2px;
     }
   }
 }
+
+
+
+
 
 .dashboard-nav{
   display: flex;

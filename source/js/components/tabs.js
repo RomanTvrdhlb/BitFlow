@@ -3,8 +3,6 @@ import {
   addCustomClass,
   removeCustomClass,
 } from "../functions/customFunctions";
-import vars from "../_vars";
-
 
 // --------------- tabs custom function --------------- //
 
@@ -38,7 +36,6 @@ const tabsFunction = function (
               ),
               active
             );
-
           });
         });
       }
@@ -47,3 +44,6 @@ const tabsFunction = function (
 
 tabsFunction(document.querySelectorAll("[data-tabs-parrent]"), "data-tab", "data-tab-content");
 tabsFunction(document.querySelectorAll("[data-inner-parrent]"), "data-inner-tab", "data-inner-content");
+
+
+

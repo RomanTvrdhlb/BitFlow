@@ -60,5 +60,6 @@
 
     &__icon{
         margin-right: clamp(10px, 1.2821vw, 15px);
+        pointer-events: none;
     }
 }
