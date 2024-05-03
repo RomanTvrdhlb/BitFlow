@@ -1,0 +1,53 @@
+.main-referral{
+    padding: clamp(18px, 2.0377vw, 27px) clamp(15px, 2.4906vw, 33px);
+    border-radius: 12px;
+    background: var(--gr-x);
+    @include gradient-border(var(--gr-w), 1px);
+    display: flex;
+    grid-gap: 15px;
+
+    @include for-small-tablet{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include small-tablet{
+        flex-direction: column;
+        
+    }
+
+    &__link{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: 16px;
+        color: rgba(var(--cl-g),1.0);
+    }
+
+    &__btns{
+        display: flex;
+        align-items: center;
+        grid-gap: 15px;
+
+        .blue-btn{
+            height: 45px;
+            grid-gap: 10px;
+
+            @include for-tablet{
+                min-width: clamp(165px, 15.0189vw, 199px);
+            }
+
+            @include tablet{
+                min-width: clamp(165px, 19.434vw, 199px);
+            }
+
+            svg,img{
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        @include ios{
+            flex-wrap: wrap;
+        }
+    }
+}

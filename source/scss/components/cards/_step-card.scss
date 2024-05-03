@@ -1,6 +1,6 @@
 .step-card {
   @include gradient-border(var(--gr-m), 1px);
-  background: linear-gradient(180deg, rgba(21, 19, 45, 0) 0%, #15132d 100%);
+  background: var(--gradient-e);
   border-radius: 21px;
   overflow: hidden;
   display: flex;

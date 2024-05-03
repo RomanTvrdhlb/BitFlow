@@ -1,0 +1,55 @@
+.referral-section {
+  padding-bottom: clamp(50px, 5.1321vw, 68px);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(25px, 2.1887vw, 29px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(35px, 3.0189vw, 40px);
+  }
+
+  &__wrapp {
+    margin-top: clamp(15px, 2.3396vw, 31px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(10px, 1.8868vw, 25px);
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: clamp(30px, 2.6415vw, 35px);
+  }
+
+  .dashboard-top {
+    grid-gap: 5px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+
+    @include small-tablet {
+      overflow-x: scroll;
+      width: calc(100% + (clamp(16px, 1.6239vw, 19px) * 2));
+      margin-left: calc(clamp(16px, 1.6239vw, 19px) * -1);
+    }
+  }
+
+  &__item {
+    &:first-child {
+      margin-bottom: -16px;
+    }
+
+    @include small-tablet {
+      margin: 0 clamp(16px, 1.6239vw, 19px);
+      width: 760px;
+    }
+  }
+}

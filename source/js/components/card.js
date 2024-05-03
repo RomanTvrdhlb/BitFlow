@@ -116,3 +116,27 @@ copyForms && copyForms.forEach(function(form){
         });
     });
 });
+
+
+const referralCards = document.querySelectorAll('.main-referral');
+
+referralCards && referralCards.forEach(function(card){
+    const valueEl = card.querySelector('[data-value]');
+    const copyBtn = card.querySelector('.copy');
+    
+    copyBtn.addEventListener('click', function(e){
+        e.preventDefault();
+
+        const value = valueEl.getAttribute('data-value');
+
+        navigator.clipboard.writeText(value)
+        .then(() => {
+            valueEl.innerText = 'Link copied!';
+            valueEl.style.color = '#53FFEC';
+        })
+        .catch(err => {
+            valueEl.innerText = 'Error copied!';
+            valueEl.style.color = '#F62C2C';
+        });
+    });
+});

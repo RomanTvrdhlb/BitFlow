@@ -1,0 +1,19 @@
+.mine-section{
+    padding-bottom: clamp(50px, 5.1321vw, 68px);
+    
+    .dashboard-top{
+        margin-bottom: 10px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 2.6415vw, 35px);
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: clamp(30px, 2.6415vw, 35px);
+    }
+}

@@ -54,7 +54,9 @@
     }
 
     &__item{
-        margin: 0 clamp(16px, 1.6239vw, 19px);
-        width: 760px;
+        @include small-tablet{
+            margin: 0 clamp(16px, 1.6239vw, 19px);
+            width: 760px;
+        }
     }
 }

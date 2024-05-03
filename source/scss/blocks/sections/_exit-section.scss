@@ -1,0 +1,66 @@
+.exit-section{
+    padding-bottom: clamp(50px, 5.1321vw, 68px);
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 2.8679vw, 38px);
+    }
+
+    .dashboard-top{
+        margin-bottom: clamp(10px, 1.283vw, 17px);
+    }
+
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: clamp(30px, 2.6415vw, 35px);
+    }
+
+    &__btns{
+        display: flex;
+        align-items: center;
+      
+        backdrop-filter: blur(10.800000190734863px);
+       
+
+        @include for-mobile{
+            width: fit-content;
+        }
+
+
+        @include mobile{
+            .exit-btn{
+                width: 100%;
+                padding: 20px 20px 20px 30px;
+            }
+
+            .stay-btn{
+                width: 100%;
+                padding: 20px 30px 20px 20px;
+            }
+        }
+
+        @include for-ios{
+            border-radius: 99px;
+            background: rgba(var(--bg-e),.35);
+        }
+
+        @include ios{
+            
+            flex-direction: column;
+            grid-gap: 15px;
+
+            .stay-btn{
+                background:  rgba(var(--bg-e),.35);
+                &::before, &::after{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    
+}
