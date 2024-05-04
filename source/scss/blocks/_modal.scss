@@ -84,8 +84,6 @@
     margin-bottom: clamp(20px, 2.2642vw, 30px);
   }
 
-  
-
   .main-btn{
     max-width: 100%;
     height: 50px;
@@ -154,16 +152,6 @@
     }
   }
 
-  // .main-form {
-  //   border: none;
-  //   background: initial;
-  //   padding: 0;
-
-  //   .main-btn {
-  //     margin-top: 7px;
-  //     max-width: 100%;
-  //   }
-  // }
 
     &__tab{
       padding: clamp(25px, 2.1887vw, 29px) clamp(20px, 2.2642vw, 30px) clamp(25px, 2.1887vw, 29px) clamp(20px, 1.9623vw, 26px);
@@ -178,18 +166,28 @@
     &__left{
       padding: clamp(25px, 2.1887vw, 29px) clamp(20px, 2.8679vw, 38px);
       position: relative;
-      background: linear-gradient(2deg, #6b76fe 0%, #53ffec 100%);
+      background: var(--gradient-h);
       display: flex;
       flex-direction: column;
       grid-gap: clamp(30px, 2.566vw, 34px);
       align-items: center;
+      height: 100%;
 
       .logo{
-        margin-bottom: 4px;
+        z-index: 2;
         img{
-          width: 170px;
-          height: 41px;
+          width: clamp(121px, 12.8302vw, 170px);
+          height: clamp(25px, 3.0943vw, 41px);
         }
+
+        @include for-small-tablet{
+          margin-bottom: 4px;
+        }
+      }
+
+      @include small-tablet{
+        grid-gap: 10px;
+        overflow: hidden;
       }
     }
 
@@ -214,7 +212,7 @@
       
       &::after{
         background: transparent;
-        background-color: #0e0d25;
+        background-color: rgba(var(--bg-p),1.0);
       }
       .modal{
 
@@ -222,21 +220,50 @@
           font-family: var(--font-family);
           font-style: italic;
           font-weight: 800;
-          font-size: clamp(30px, 3.3962vw, 45px);
+          font-size: clamp(26px, 3.3962vw, 45px);
           line-height: 100%;
           text-transform: uppercase;
           text-align: center;
-         
+          flex-grow: 1;
+          z-index: 2;
           .blue-text{
             color: rgba(var(--cl-l),1.0);
           }
         }
 
+        &__image{
+
+          @include small-tablet{
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            justify-content: center;
+            img,picture{
+              width: Min(39.063vw, 300px);
+            }
+
+            &::before{
+              position: absolute;
+              content: '';
+              background: var(--gradient-j);
+              z-index: -1;
+              left: calc(clamp(20px, 2.8679vw, 38px) * -1);
+              right: calc(clamp(20px, 2.8679vw, 38px) * -1);
+              height: 200%;
+              bottom: 0;
+            }
+          }
+        }
+
         &__box{
-          display: grid;
-          grid-template-columns: .955fr 1fr;
           grid-gap: 0;
-      }
+          
+          @include for-small-tablet{
+            display: grid;
+            grid-template-columns: .955fr 1fr;
+          }
+        }
     }
     }
 

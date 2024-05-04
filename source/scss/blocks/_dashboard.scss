@@ -5,6 +5,10 @@
   grid-gap: clamp(20px, 3.9316vw, 46px);
   align-items: flex-start;
 
+  @include for-small-tablet{
+    min-height: calc(100vh - var(--header-height));
+  }
+
   @include tablet {
    
     grid-template-columns: 100%;
@@ -56,7 +60,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: linear-gradient(180deg, rgba(32, 28, 70, 0) 0%, #201c46 100%);
+      background: var(--gradient-i);
       transition: all 0.3s ease 0s;
       max-width: 45px;
       display: grid;
@@ -70,16 +74,12 @@
         transition: all 0.5s ease 0s;
         width: 8px;
         height: 8px;
-        border: 1px solid #8a92bc;
+        border: 1px solid var(--br-h);
         border-radius: 2px;
       }
     }
   }
 }
-
-
-
-
 
 .dashboard-nav{
   display: flex;
@@ -87,9 +87,9 @@
   grid-gap: 5px;
   border-radius: 12px;
   padding: 4px 5px;
-  background: linear-gradient(180deg, rgba(15, 13, 33, 0) 0%, rgba(25, 22, 60, 0.52) 100%);
+  background: var(--gr-x);
   width: fit-content;
-  @include gradient-border(linear-gradient(200deg, #201c46 0%, rgba(32, 28, 70, 0) 100%), 1px);
+  @include gradient-border(var(--gr-w), 1px);
   &__item{
     display: flex;
     @include mobile{
@@ -105,14 +105,14 @@
     padding: 13px 21px 12px 17px;
     transition: all .3s;
     border-radius: 12px;
-    @include gradient-border(linear-gradient(200deg, #201c46 0%, rgba(32, 28, 70, 0) 100%), 1px);
+    @include gradient-border(var(--gr-w), 1px);
     &::before{
       transition: all .3s;
       opacity: 0;
     }
 
     &.active{
-      background: #242052;
+      background: rgba(var(--bg-q),1.0);
 
       &::before{
         opacity: 1;

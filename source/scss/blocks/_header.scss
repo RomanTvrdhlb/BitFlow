@@ -193,13 +193,9 @@
     padding: 18px 39px;
     border-radius: 99px;
     flex-shrink: 0;
-
     @include gradient-border(var(--gr-h), 1px);
-
-    &:hover {
-      color: rgba(var(--cl-f), 1);
-    }
-
+    z-index: 1;
+    
     @include laptop {
       @include for-tablet {
         padding: 18px 30px;
@@ -213,6 +209,54 @@
     @include small-tablet {
       font-size: clamp(12px, 1.1966vw, 14px);
     }
+
+    &::after{
+      position: absolute;
+      content: '';
+      inset: 0;
+      transition: all .3s;
+      background: var(--gr-z);
+      border-radius: inherit;
+      z-index: -2;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+  }
+
+  span{
+      position: absolute;
+      content: '';
+      inset: 0;
+      transition: all .3s;
+      background: var(--gradient-d);
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+  }
+
+  &:hover{
+     &::after{
+      opacity: 1;
+      visibility: visible;
+     }
+  }
+
+  &:focus{
+      &::after{
+          opacity: 0;
+          visibility: hidden;
+      }
+      span{
+          visibility: visible;
+          opacity: 1;
+         }
+  }
+
+  &:disabled{
+      opacity: 0.4;
+  }
   }
 
   &__user{

@@ -33,3 +33,23 @@ forms && forms.forEach(function(form) {
         });
     });
 });
+
+const mainForms = document.querySelectorAll('.main-form');
+
+mainForms && mainForms.forEach(function(form) {
+    const labels = form.querySelectorAll('.main-form__label');
+
+    labels.forEach(function(label) {
+        const passwordInput = label.querySelector('.main-form__input');
+        const btn = label.querySelector('.main-form__show');
+    
+        if(btn){
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isActive = passwordInput.type === 'password';
+                passwordInput.type = isActive ? 'text' : 'password';
+                btn.classList.toggle('active', isActive);
+            });
+        }
+    })
+})

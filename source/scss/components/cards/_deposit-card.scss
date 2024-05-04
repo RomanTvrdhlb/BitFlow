@@ -1,8 +1,8 @@
 .deposit-card{
     padding: 19px clamp(20px, 1.8113vw, 24px) clamp(20px, 1.8868vw, 25px);
-    background: linear-gradient(180deg, rgba(15, 13, 33, 0) 0%, rgba(25, 22, 60, 0.52) 100%);
+    background: var(--gr-x);
     border-radius: 12px;
-    @include gradient-border(linear-gradient(200deg, #201c46 0%, rgba(32, 28, 70, 0) 100%), 1px);
+    @include gradient-border(var(--gr-w), 1px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -40,8 +40,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(180deg, #201c46 0%, rgba(32, 28, 70, 0) 100%);
-        @include gradient-border(linear-gradient(37deg, #29235c 0%, rgba(41, 35, 92, 0) 100%), 1px);
+        background: var(--gradient-b);
+        @include gradient-border(var(--gradient-c), 1px);
         z-index: 1;
 
         &::after{
@@ -49,7 +49,7 @@
             content: '';
             inset: 0;
             transition: all .3s;
-            background: linear-gradient(180deg, #2a2758 0%, rgba(42, 39, 88, 0.65) 100%);
+            background: var(--gr-z);
             border-radius: inherit;
             z-index: -2;
             opacity: 0;
@@ -62,7 +62,7 @@
             content: '';
             inset: 0;
             transition: all .3s;
-            background: linear-gradient(180deg, rgba(42, 39, 88, 0) 0%, rgba(42, 39, 88, 0.25) 100%);
+            background: var(--gradient-d);
             border-radius: inherit;
             z-index: -1;
             opacity: 0;
@@ -97,7 +97,7 @@
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 14px;
-        color: #c0c0ff;
+        color: rgba(var(--cl-k),1.0);
         opacity: 0.5;
         align-self: start;
     }
@@ -107,7 +107,7 @@
         font-family: var(--second-family);
         font-weight: 700;
         font-size: 16px;
-        color: #f0f3f7;
+        color: rgba(var(--cl-g),1.0);
     }
 
     &__icon{
@@ -121,7 +121,6 @@
         background-color: rgba(227, 127, 6, .16);
         position: relative;
         z-index: 1;
-        // background-color: #e37f06;
         svg, img{
             width: 45px;
             aspect-ratio: 1;

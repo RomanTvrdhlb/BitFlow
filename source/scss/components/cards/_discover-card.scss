@@ -6,7 +6,7 @@
   overflow: hidden;
 
   @include gradient-border(
-    linear-gradient(353deg, rgba(36, 32, 79, 0) 0%, #26225d 100%),
+    var(--gr-r),
     1px
   );
 

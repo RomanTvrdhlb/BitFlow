@@ -44,6 +44,13 @@
     }
   }
 
+  .main-btn{
+    svg{
+      position: relative;
+      top: 2px;
+    }
+  }
+
   &__inner {
     display: flex;
     position: relative;

@@ -69,7 +69,7 @@
     top: calc(100% + 5px);
     overflow: hidden;
     transition: height 0.1s ease-in;
-    border-radius: 22px;
+    border-radius: 12px;
     left: -2px;
     border: solid 1px transparent;
    
@@ -141,10 +141,6 @@
 
 .select.active {
   z-index: 9;
-
-  .select__body {
-    border-color: var(--br-d);
-  }
 
   .select__header > svg {
     transform: scaleY(-1);

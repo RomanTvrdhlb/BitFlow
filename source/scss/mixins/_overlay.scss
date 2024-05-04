@@ -19,7 +19,7 @@
   pointer-events: none;
 
   @include  mobile {
-    padding: 0;
+    padding: 10px 0;
   }
 
   &::-webkit-scrollbar {
