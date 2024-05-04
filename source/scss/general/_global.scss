@@ -44,15 +44,6 @@ main {
   &.no-padding {
     padding: 0;
   }
-
-
-  &.circles{
-    @include tablet{
-      &::before,&::after{
-        display: none;
-      }
-    }
-  }
 }
 
 *,

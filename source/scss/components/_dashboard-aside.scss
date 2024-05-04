@@ -79,16 +79,20 @@
   }
 
   &__close{
-    position: fixed;
+    display: none;
+    position: absolute;
     z-index: 6;
     top: 20px;
     right: 15px;
+
+    @include tablet{
+      display: block;
+    }
     
     svg{
         fill: #434CFF;
         transition: all .4s;
     }
-    
     
     &:hover{
         svg{

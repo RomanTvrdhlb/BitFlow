@@ -5,16 +5,16 @@
 <body>
   @include('partials/header-dashbord.html')
 
-  <main class="circles">
+  <main class="circles circles--dash">
     <div class="container container--dash ">
       <div class="dashboard" data-tabs-parrent>
         <button class="dashboard__btn">
-          <div class="dashboard__btn-wrapp">
+          <span class="dashboard__btn-wrapp">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
         </button>
         <aside class="dashboard-aside">
           <button class="dashboard-aside__close">
@@ -2075,7 +2075,7 @@
                 <span class="deposit-section__title">Choose currency</span>
 
                 <form class="search">
-                  <label for="search" class="search__label">
+                  <div class="search__label">
                     <input class="search__input" type="text" name="search" id="search" placeholder="Search">
                     <span class="search__border"></span>
                     <button class="search__btn">
@@ -2083,7 +2083,7 @@
                         <use href='img/sprite/sprite.svg#search'></use>
                       </svg>
                     </button>
-                  </label>
+                  </div>
                 </form>
               </div>
 
@@ -2590,7 +2590,7 @@
                 <span class="withdraw-section__title">Choose currency</span>
 
                 <form class="search">
-                  <label for="search_2" class="search__label">
+                  <div class="search__label">
                     <input class="search__input" type="text" name="search_2" id="search_2" placeholder="Search">
                     <span class="search__border"></span>
                     <button class="search__btn">
@@ -2598,7 +2598,7 @@
                         <use href='img/sprite/sprite.svg#search'></use>
                       </svg>
                     </button>
-                  </label>
+                  </div>
                 </form>
               </div>
 
@@ -2621,10 +2621,10 @@
                     </div>
                     <span class="withdraw-row__value">0.00000000 <b>BTC</b></span>
                     <div class="withdraw-row__btns">
-                      <button class="blue-btn">Withdraw
+                      <button class="blue-btn" data-btn-modal="sent">Withdraw
                         <span></span>
                       </button>
-                      <button class="blue-btn">Exchange for USDT
+                      <button class="blue-btn" data-btn-modal="blocked">Exchange for USDT
                         <span></span>
                       </button>
                     </div>
@@ -2641,10 +2641,10 @@
                     </div>
                     <span class="withdraw-row__value">0.00000000 <b>ETH</b></span>
                     <div class="withdraw-row__btns">
-                      <button class="blue-btn">Withdraw
+                      <button class="blue-btn" data-btn-modal="process">Withdraw
                         <span></span>
                       </button>
-                      <button class="blue-btn">Exchange for USDT
+                      <button class="blue-btn" data-btn-modal="funds">Exchange for USDT
                         <span></span>
                       </button>
                     </div>
@@ -2661,7 +2661,7 @@
                     </div>
                     <span class="withdraw-row__value">0.00000000 <b>XRP</b></span>
                     <div class="withdraw-row__btns">
-                      <button class="blue-btn">Withdraw
+                      <button data-btn-modal="deposit" class="blue-btn">Withdraw
                         <span></span>
                       </button>
                       <button class="blue-btn">Exchange for USDT
@@ -2711,7 +2711,6 @@
                   </div>
                 </li>
               </ul>
-
             </div>
           </div>
 
@@ -3186,7 +3185,7 @@
                 <div class="pass-form__box">
                   <div class="pass-form__field">
                     <span class="pass-form__pretitle">New password:</span>
-                    <label for="pass_new" class="pass-form__label">
+                    <div class="pass-form__label">
                       <input type="password" name="password_new" id="pass_new" class="pass-form__input"  maxlength="17">
                       <span class="pass-form__dots"></span>
                       <button class="pass-form__icon">
@@ -3194,11 +3193,11 @@
                           <use href='img/sprite/sprite.svg#eye'></use>
                         </svg>
                       </button>
-                    </label>
+                    </div>
                   </div>
                   <div class="pass-form__field">
                     <span class="pass-form__pretitle">Confirm new password:</span>
-                    <label for="confirm_pass" class="pass-form__label">
+                    <div class="pass-form__label">
                       <input type="password" name="confirm_pass" id="confirm_pass" class="pass-form__input"  maxlength="17">
                       <span class="pass-form__dots"></span>
                       <button class="pass-form__icon">
@@ -3206,7 +3205,7 @@
                           <use href='img/sprite/sprite.svg#eye'></use>
                         </svg>
                       </button>
-                    </label>
+                    </div>
                   </div>
                 </div>
 

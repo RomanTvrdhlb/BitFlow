@@ -410,4 +410,51 @@
     width: Min(13.2479vw, 155px);
     background-position: left;
   }
+
+  &--dash{
+    overflow: hidden;
+    &::after{
+      width: Min(10.251vw, 155px);
+
+      @include tablet{
+        @include for-mobile{
+          right: -5%;
+        }
+      }
+
+      @include mobile{
+        right: -8%;
+      }
+    }
+
+    &::before{
+      width: Min(11.376vw, 172px);
+
+      @include tablet{
+        @include for-mobile{
+          left: -6%;
+        }
+      }
+
+      @include mobile{
+        left: -9%;
+      }
+    }
+
+    &::before, &::after{
+      height: Min(50.331vw, 761px);
+      top: 0;
+      transform: translateY(10%);
+      @include tablet{
+        transform: translateY(65%);
+      }
+
+      @include mobile {
+        width: 90px;
+        height: 400px;
+      }
+    }
+
+    
+  }
 }
