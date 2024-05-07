@@ -197,13 +197,18 @@
   }
 
   &--staking {
-    padding: clamp(70px, 9.0598vw, 106px) 0 clamp(60px, 9.1453vw, 107px);
+    padding: clamp(70px, 9.0598vw, 106px) 0 clamp(50px, 9.1453vw, 107px);
     .main-top {
       @include for-mobile {
         max-width: clamp(400px, 63.0769vw, 738px);
       }
+      grid-gap: 20px;
 
       &__title {
+        line-height: 110%;
+        @include for-mobile{
+          font-size: clamp(50px, 8.547vw, 100px);
+        }
         @include mobile {
           max-width: clamp(400px, 63.0769vw, 738px);
         }
@@ -211,6 +216,15 @@
           font-size: Min(15vw, 60px);
         }
       }
+
+      &__pretitle{
+        @include for-tablet{
+        font-size: clamp(16px, 1.7949vw, 21px);
+      }
+      line-height: 100%;
+      letter-spacing: -0.04em;
+    }
+
       &__bottom {
         width: 100%;
         @include for-mobile {
@@ -228,6 +242,7 @@
       }
 
       .main-btn {
+        margin-top: clamp(15px, 2.1368vw, 25px);
         @include tablet {
           @include mobile {
             max-width: 279px;
@@ -243,6 +258,35 @@
       }
     }
 
+    .first-section{
+        &__image{
+          right: -3%;
+          top: -20%;
+          width: Min(51.2821vw, 600px);
+          height: Min(51.2821vw, 600px);
+
+          video{
+            height: 100%;
+          }
+
+          @include tablet{
+            top: -15%;
+          }
+
+          &::before{
+            display: none;
+          }
+
+          @include small-tablet{
+            position: static;
+            width: Min(65.104vw, 500px);
+            height: Min(65.104vw, 500px);
+            align-self: center;
+            margin-top: -50px;
+          }
+        }
+    }
+
     &::before,
     &::after {
       @include tablet {
@@ -252,6 +296,12 @@
       }
       @include mobile {
         transform: translateY(-65%);
+      }
+    }
+
+    &::after{
+      @include for-small-tablet{
+        z-index: 1;
       }
     }
 
