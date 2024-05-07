@@ -9,6 +9,7 @@ import './components/modals';
 import './components/select';
 import './components/card';
 import './components/showPass';
+import './components/preloader';
 
 
 
