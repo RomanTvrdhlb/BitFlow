@@ -1,5 +1,5 @@
 .calc-section{
-    padding-bottom: clamp(70px, 8.2051vw, 96px);
+    padding-bottom: clamp(80px, 11.9658vw, 140px);
 
 
     &__box{
@@ -27,7 +27,9 @@
     &__title{
        display: inline-flex;
        flex-direction: column;
-       b{
+      font-family: var(--second-family);
+      
+      b{
         padding-left: clamp(20px, 4.2735vw, 50px);
        }
     }
