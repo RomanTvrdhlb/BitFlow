@@ -4,15 +4,25 @@
     border-radius: 21px;
     background:  rgba(var(--bg-s),1.0);
     padding: clamp(29px, 3.0769vw, 36px) clamp(15px, 3.1624vw, 37px);
-
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 10px clamp(25px, 2.906vw, 34px);
     align-items: end;
+    overflow: hidden;
 
     @include mobile{
         grid-template-columns: 100%;
         min-height: 180px;
+    }
+
+    &:hover{
+        .join-top__image{
+            transform: translateY(-10%) scale(1.03);
+        }
+
+        .join-top__bg{
+            transform: scale(1.2);
+        }
     }
 
     &__bg{
@@ -25,6 +35,7 @@
         pointer-events: none;
         display: flex;
         align-items: flex-end;
+        transition: all .4s;
         
         svg{
             width: 100%;
@@ -56,7 +67,8 @@
         grid-row:  span 2;
         width: clamp(144px, 16.0684vw, 188px);
         height: clamp(144px, 16.0684vw, 188px);
-        
+        position: relative;
+        transition: all .4s;
         img,picture{
             height: 100%;
         }

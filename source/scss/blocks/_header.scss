@@ -29,7 +29,7 @@
       visibility: hidden;
     }
 
-    .header__btns {
+    .header__btns{
       transform: translateX(12px);
       opacity: 0;
       visibility: hidden;
@@ -110,6 +110,7 @@
    
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       grid-gap: 8px;
 
     .main-btn {
