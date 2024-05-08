@@ -208,6 +208,7 @@
   }
 
   &__link {
+    overflow: hidden;
     svg {
       transition: all 0.4s;
       fill: rgba(var(--cl-c),1.0);
@@ -217,12 +218,32 @@
       svg{
         fill: rgba(var(--cl-a),1.0);
       }
+
+      .social__top{
+        transform: translateY(-120%);
+      }
     }
 
     &.disabled{
       opacity: .2;
     }
   }
+  
+  &__top{
+    font-weight: 500;
+    font-size: 10px;
+    color: rgba(var(--cl-n),1.0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 3px 9px 2px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    background: rgba(var(--bg-u),1.0);
+    transition: all .4s;
+  }
+  
 }
 
 .main-supply{

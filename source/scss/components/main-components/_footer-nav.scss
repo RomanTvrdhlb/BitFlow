@@ -2,13 +2,12 @@
     display: flex;
  
     @include for-laptop{
-        grid-gap: clamp(20px, 3.6752vw, 43px);
+        grid-gap: clamp(20px, 5.3846vw, 63px);
     }
 
     @include laptop{
-        grid-gap: 20px;
+        grid-gap: clamp(20px, 5.3846vw, 63px);
     }
-
 
     @include small-tablet{
         justify-content: space-between;
@@ -16,7 +15,7 @@
 
     &__title{
         font-family: var(--font-family);
-        font-weight: 500;
+        font-weight: 600;
         font-size: 16px;
     }
 
@@ -30,7 +29,6 @@
         display: flex;
         flex-direction: column;
         grid-gap: clamp(10px, 1.1966vw, 14px);
-
 
         @include mobile{
             flex-wrap: wrap;

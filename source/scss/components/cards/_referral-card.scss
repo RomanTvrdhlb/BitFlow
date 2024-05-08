@@ -50,4 +50,34 @@
         font-size: clamp(18px, 1.5094vw, 20px);
         color: rgba(var(--cl-f),1.0);
     }
+
+
+    &--mode{
+        padding: clamp(21px, 2.6496vw, 31px) clamp(15px, 1.7094vw, 20px);
+        grid-gap: 7px clamp(15px, 1.7094vw, 20px);
+
+        .referral-card{
+            &__title{
+                padding-top: clamp(4px, .8547vw, 10px);
+                font-size: clamp(26px, 2.735vw, 32px);
+            }
+
+            &__label{
+                border-radius: 0 221px 236px 360px;
+            }
+        
+            &__level{
+                font-size: clamp(14px, 1.3675vw, 16px);
+            }
+        
+            &__icon{
+                width: clamp(40px, 3.8462vw, 45px);
+                height: clamp(40px, 3.8462vw, 45px);
+            }
+        
+            &__percent{
+                font-size: clamp(18px, 1.7094vw, 20px);
+            }
+        }
+    }
 }

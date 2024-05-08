@@ -50,4 +50,8 @@
             flex-wrap: wrap;
         }
     }
+
+    &--mode{
+        padding: clamp(18px, 2.3077vw, 27px) clamp(15px, 4.7863vw, 56px) clamp(18px, 2.3077vw, 27px) clamp(15px, 2.8205vw, 33px);
+    }
 }

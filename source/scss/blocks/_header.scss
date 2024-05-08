@@ -257,6 +257,19 @@
   &:disabled{
       opacity: 0.4;
   }
+
+  &.login{
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    justify-self: end;
+    height: 50px;
+
+    @include mobile{
+      height: 45px;
+    }
+  }
   }
 
   &__user{
@@ -365,6 +378,22 @@
         &::before{
           display: none;
         }
+      }
+    }
+  }
+
+  .main-btn{
+
+    &.login{
+      justify-self: end;
+      height: 50px;
+      width: fit-content;
+      font-size: 14px;
+      font-family: var(--second-family);
+      font-weight: 700;
+      padding: 15px clamp(25px, 17.36px, 36px);
+      @include mobile{
+        height: 45px;
       }
     }
   }

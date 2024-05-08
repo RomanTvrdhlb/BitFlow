@@ -1,5 +1,5 @@
 .choose-section{
-    padding-bottom: clamp(60px, 7.6923vw, 90px);
+    padding-bottom: clamp(60px, 9.4017vw, 110px);
 
     .title{
         font-family: var(--second-family);
@@ -32,7 +32,7 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(30px, 4.7009vw, 55px);
+        grid-gap: clamp(30px, 5.0427vw, 59px);
     }
 
 

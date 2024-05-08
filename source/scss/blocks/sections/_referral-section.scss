@@ -52,4 +52,26 @@
       width: 760px;
     }
   }
+
+
+  &--mode{
+    padding-bottom: clamp(60px, 11.9658vw, 140px);
+
+    .referral-section{
+      &__inner{
+        grid-gap: clamp(20px, 1.9658vw, 23px);
+      }
+    }
+
+    .title{
+      display: inline-flex;
+      flex-direction: column;
+      font-family: var(--second-family);
+      line-height: 118%;
+      
+      b{
+        padding-left: clamp(25px, 5.812vw, 68px);
+        }
+   }
+  }
 }

@@ -258,3 +258,29 @@
     opacity: 0.4;
 }
 }
+
+.app-btn{
+  background: rgba(var(--bg-d),1.0);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+  padding: 12px 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .4s;
+
+  svg{
+    transition: all .4s;
+    fill: rgba(var(--cl-a),1.0);
+  }
+
+  &:hover{
+    color: rgba(var(--cl-c),1.0);
+
+    svg{
+      fill: rgba(var(--cl-c),1.0);
+    }
+  }
+}
