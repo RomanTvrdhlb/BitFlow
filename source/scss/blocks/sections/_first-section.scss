@@ -242,7 +242,7 @@
       }
 
       .main-btn {
-        margin-top: clamp(15px, 2.1368vw, 25px);
+        margin-top: clamp(15px, 2.5641vw, 30px);
         @include tablet {
           @include mobile {
             max-width: 279px;
@@ -260,10 +260,10 @@
 
     .first-section{
         &__image{
-          right: -3%;
-          top: -20%;
-          width: Min(51.2821vw, 600px);
-          height: Min(51.2821vw, 600px);
+          right: 1%;
+          top: -10%;
+          width: Min(50.3419vw, 589px);
+          height: Min(50.3419vw, 589px);
 
           video{
             height: 100%;

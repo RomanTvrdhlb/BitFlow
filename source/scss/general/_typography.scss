@@ -382,6 +382,21 @@
   -webkit-text-fill-color: transparent;
 }
 
+.main-link{
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: rgba(var(--cl-j),1.0);
+  text-underline-offset: 3px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: all .3s;
+
+  &:hover{
+    text-decoration-color: transparent;
+  }
+}
+
 .circles{
   position: relative;
 
