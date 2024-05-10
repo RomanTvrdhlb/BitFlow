@@ -34,6 +34,10 @@
             visibility: visible;
         }
         border-color: var(--br-j);
+
+        .join-link__icon{
+            transform: scale(1.1);
+        }
     }
 
     &__title{
@@ -52,7 +56,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        transition: all .3s;
         svg{
            fill: rgba(var(--cl-a),1.0);
         }

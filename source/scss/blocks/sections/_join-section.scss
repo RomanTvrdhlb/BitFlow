@@ -6,6 +6,20 @@
         display: flex;
         flex-direction: column;
         grid-gap: clamp(30px, 2.9915vw, 35px);
+
+        &--mode{
+            grid-gap: clamp(48px, 5.812vw, 68px);
+        }
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 33px;
+
+        .join-top--docs{
+            margin-top: -6px;
+        }
     }
 
     &__inner{
@@ -31,6 +45,11 @@
     .title {
         font-family: var(--third-family);
         line-height: 129%;
+
+        b{
+            font-family: var(--second-family);
+            font-weight: 400;
+        }
       }
 
 
@@ -48,5 +67,9 @@
         @include mobile{
             transform: translateY(40%);
         }
+      }
+
+      &--mode{
+        padding-bottom: clamp(60px, 10.5983vw, 124px);
       }
 }

@@ -1,0 +1,21 @@
+.comand-list{
+    display: grid;
+   
+    grid-gap: clamp(20px, 2.9915vw, 35px) clamp(18px, 1.7949vw, 21px);
+
+
+    &__item{
+        @include mobile{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @include for-mobile{
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    @include mobile{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

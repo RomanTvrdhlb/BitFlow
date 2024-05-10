@@ -81,4 +81,32 @@
             top: 15px;
         }
     }
+
+    &--docs{
+        background: rgba(var(--bg-h),1.0);
+        padding: 5px clamp(15px, 3.1624vw, 37px) 6px 10px;
+        grid-gap: 10px 0;
+
+        p{
+            @include mobile{
+                max-width: 85%;
+            }
+        }
+
+        .join-top{
+            &__image{
+                @include for-mobile{
+                    width: clamp(181px, 21.2821vw, 249px);
+                    height: clamp(191px, 21.2821vw, 249px);
+                }
+
+                @include mobile{
+                    width: Min(22.569vw, 130px);
+                    height: Min(22.569vw, 130px);
+                    right: 0;
+                    top: 5px;
+                }  
+            }
+        }
+    }
 }
