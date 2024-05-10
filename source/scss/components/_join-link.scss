@@ -13,7 +13,6 @@
     grid-gap: 8px 18px;
     position: relative;
     transition: all .4s;
-    
 
     &::before{
         position: absolute;
@@ -59,6 +58,21 @@
         transition: all .3s;
         svg{
            fill: rgba(var(--cl-a),1.0);
+        }
+    }
+
+    &--mode{
+        background: var(--gradient-q);
+        border: none;
+        &::before{
+            background: var(--gradient-r);
+        }
+
+        .join-link{
+
+            &__icon{
+                background-color: rgba(var(--bg-v),1.0);
+            }
         }
     }
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  <!--@include('partials/header-user.html')-->
+
+  <main>
+
+    <section class="about-section about-section--mode circles">
+      <div class="container">
+        <div class="about-section__box">
+          <div class="about-section__top">
+            <h1 class="title">Contacts</h1>
+            <p>Please leave us a message. Our team will contact you as soon as possible.
+            </p>
+          </div>
+
+          <div class="about-section__links">
+            <a href="#" class="join-link join-link--mode">
+              <span class="join-link__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#tg2'></use>
+                </svg>
+              </span>
+              <span class="join-link__title">Telegram</span>
+              Support 24/7
+            </a>
+            <a href="#" class="join-link">
+              <span class="join-link__icon">
+                <svg width='26' height='26'>
+                  <use href='img/sprite/sprite.svg#pin'></use>
+                </svg>
+              </span>
+              <span class="join-link__title">Our adress</span>
+               Av. de Brasil, 29, Tetuán, 28020 Madrid, España
+            </a>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="join-section join-section--mode">
+      <div class="container">
+        <div class="join-section__box">
+            <h2 class="title">Join community</h2>
+            <div class="join-section__inner">
+              <a href="#" class="join-top">
+                <div class="join-top__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/tg.webp'>
+                    <img width='188' height='188' src='img/index/tg.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="join-top__bg">
+                  <svg width='1108' height='234'>
+                    <use href='img/sprite/sprite.svg#bg'></use>
+                  </svg>
+                </div>
+                <span class="join-top__title">Biflow channel in telegram</span>
+                <p>Join our community and ask questions</p>
+              </a>
+              <div class="join-section__links">
+                <a href="#" class="join-link">
+                  <span class="join-link__icon">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tg2'></use>
+                    </svg>
+                  </span>
+                  <span class="join-link__title">Telegram</span>
+                  Join chat
+                </a>
+                <a href="#" class="join-link">
+                  <span class="join-link__icon">
+                    <svg width='26' height='26'>
+                      <use href='img/sprite/sprite.svg#x'></use>
+                    </svg>
+                  </span>
+                  <span class="join-link__title">Twitter (X)</span>
+                  Follow @biflow.org
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>
