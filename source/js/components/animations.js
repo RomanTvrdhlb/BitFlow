@@ -71,3 +71,20 @@ initAnimation(securityOptions, securityEl);
 initAnimation(aprOptions, aprEl);
 initAnimation(supportOptions, supportEl);
 initAnimation(riskOptions, riskEl);
+
+
+const giftElements = document.querySelectorAll('.gift');
+
+giftElements && giftElements.forEach(function(gift){
+  playGiftAnimation(gift);
+  setInterval(function() {
+    playGiftAnimation(gift);
+  }, 4000);
+});
+
+function playGiftAnimation(el) {
+  el.classList.add('animate-gift');
+  setTimeout(() => {
+    el.classList.remove('animate-gift');
+  }, 2000);
+}

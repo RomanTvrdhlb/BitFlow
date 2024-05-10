@@ -1,5 +1,5 @@
 import './components/dinamicHeight';
-import './components/animateBtn';
+// import './components/animateBtn';
 import './components/accordion';
 import './components/range';
 import './components/animations';
