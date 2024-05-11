@@ -1,7 +1,6 @@
 .calc-section{
     padding-bottom: clamp(80px, 11.9658vw, 140px);
 
-
     &__box{
         display: flex;
         flex-direction: column;
@@ -21,6 +20,10 @@
           z-index: -2;
           transform: translate(-50%, 81%);
           pointer-events: none;
+
+          @include small-tablet{
+            width: 100vw;
+          }
         }
     }
 

@@ -1,0 +1,12 @@
+.tutorial-list{
+    display: grid;
+    grid-gap: clamp(20px, 2.5641vw, 30px) clamp(16px, 1.7094vw, 20px);
+
+    @include for-small-tablet{
+        grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    }
+
+    @include small-tablet{
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}

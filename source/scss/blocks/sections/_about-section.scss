@@ -1,6 +1,7 @@
 .about-section {
   padding: clamp(30px, 3.1624vw, 37px) 0 clamp(48px, 5.812vw, 68px);
   z-index: 1;
+  overflow: hidden;
 
   .container {
     z-index: 1;
@@ -118,7 +119,7 @@
 
   &--mode {
     padding: clamp(30px, 3.1624vw, 37px) 0 clamp(45px, 5.5556vw, 65px);
-
+    overflow: initial;
     .about-section {
       &__box {
         grid-gap: clamp(25px, 2.5641vw, 30px);
@@ -149,6 +150,7 @@
       }
 
       @include small-tablet {
+        filter: blur(0);
         transform: translateY(35%);
       }
 
@@ -166,6 +168,9 @@
       @include laptop{
         left: -30px;
     }
+    @include small-tablet{
+      left: 0;
+    }
     }
 
     &::after {
@@ -182,6 +187,42 @@
             right: -30px;
             }
         }
+
+        @include small-tablet{
+          right: 0;
+        }
       }
+  }
+
+  &--tutorial{
+    padding: clamp(30px, 3.1624vw, 37px) 0 clamp(60px, 7.1795vw, 84px);
+
+    .about-section{
+
+      &__top{
+        grid-template-columns: 100%;
+        grid-gap: 12px;
+
+        p{
+          max-width: 100%;
+          color: rgba(var(--cl-c),1.0);
+          line-height: 162%;
+          margin-top: 0;
+        }
+      }
+
+      &__box{
+        grid-gap: 30px;
+      }
+    }
+
+    &::before,
+    &::after {
+    z-index: -1;
+
+    @include for-tablet{
+    transform: translateY(-3%);
+    }
+  }
   }
 }

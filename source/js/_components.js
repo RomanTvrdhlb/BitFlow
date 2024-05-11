@@ -10,6 +10,7 @@ import './components/select';
 import './components/card';
 import './components/showPass';
 import './components/preloader';
+import './components/fancybox';
 
 
 

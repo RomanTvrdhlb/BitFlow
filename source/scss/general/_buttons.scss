@@ -306,6 +306,20 @@
   animation: shakeGift 2s linear;
 }
 
+.play-btn{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23434CFF'/%3E%3Cpath fill='%23fff' d='m31.661 27.3859-10.076 6.166c-2.005 1.227-4.584-.2121-4.584-2.5581v-11.989c0-2.346 2.579-3.7849 4.584-2.5579l10.076 6.166c1.785 1.093 1.785 3.681 0 4.773Z'/%3E%3C/svg%3E");
+  width: clamp(40px, 4.2735vw, 50px);
+  height: clamp(40px, 4.2735vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .4s;
+}
+
 @keyframes shakeGift {
   0% {
     transform: translate(30%, -5%) scale(1);

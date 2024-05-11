@@ -189,3 +189,101 @@
 
 
 }
+
+.levels-row {
+  border-radius: 21px;
+  background: none;
+  z-index: 5;
+  
+  &::before{
+    background: var(--gradient-s);
+    inset: -1px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+  }
+
+  &::after{
+    backdrop-filter: blur(17.600000381469727px);
+    background: var(--gradient-p);
+    background-color: rgba(var(--bg-f),1.0);
+    -webkit-mask-composite: initial;
+    mask-composite: initial;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover{
+    &::before{
+      opacity: .5;
+      visibility: visible;
+    }
+  }
+
+  &.active{
+    &::before{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:not(.withdraw-row--head){
+    padding: clamp(19px, 1.8803vw, 22px) clamp(16px, 2.3932vw, 28px) clamp(18px, 1.7949vw, 21px);
+    border: solid 1px var(--br-e);
+  }
+
+  @include for-laptop{
+    grid-template-columns: .75fr .8fr .85fr .21fr;
+  }
+
+  @include laptop{
+    @include for-tablet{
+    grid-template-columns: .75fr .8fr .85fr .32fr;
+    }
+  }
+
+  @include tablet{
+    @include for-small-tablet{
+    grid-template-columns: .75fr .8fr .85fr .32fr;
+    }
+  }
+
+  @include small-tablet{
+    grid-template-columns: .75fr .8fr .5fr .4fr;
+  }
+
+  @include mobile{
+    grid-gap: 15px;
+  }
+
+  .withdraw-row{
+    &__name{
+      color: rgba(var(--cl-a),1.0);
+
+      &:first-child{
+        margin-left: calc(clamp(16px, 2.3932vw, 28px) * -1);
+      }
+    }
+
+    &__value{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(var(--cl-a),1.0);
+    }
+
+    &__box{
+      align-items: center;
+
+      &:first-child{
+        grid-gap: 2px;
+      }
+    }
+  }
+
+  &.withdraw-row--head{
+    padding: 0 clamp(16px, 2.3932vw, 28px);
+    margin: 0;
+  }
+}

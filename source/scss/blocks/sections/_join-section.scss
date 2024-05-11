@@ -1,7 +1,8 @@
 .join-section{
     padding-bottom: clamp(60px, 11.9658vw, 140px);
     z-index: 3;
-
+    
+    
     &__box{
         display: flex;
         flex-direction: column;
@@ -64,12 +65,32 @@
         }
         }
 
+        @include small-tablet{
+            filter: blur(0);
+        }
+
         @include mobile{
             transform: translateY(40%);
         }
       }
 
+      &::before{
+        @include small-tablet{
+        left: 0;
+        }
+      }
+
+      &::after{
+       @include small-tablet{
+        right: 0;
+       }
+      }
+
       &--mode{
         padding-bottom: clamp(60px, 10.5983vw, 124px);
+      }
+
+      &--tutorial{
+        padding-bottom: clamp(60px, 9.4017vw, 110px);
       }
 }
