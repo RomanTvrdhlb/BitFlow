@@ -1,0 +1,14 @@
+.exchange-section{
+    padding-bottom: clamp(50px, 5.1321vw, 68px);
+  
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 2.3077vw, 27px);
+    }
+
+
+    .dashboard-top{
+        grid-gap: clamp(25px, 2.735vw, 32px);
+    }
+}

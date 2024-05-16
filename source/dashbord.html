@@ -71,6 +71,16 @@
               </button>
             </li>
             <li class="aside-nav__item">
+              <button class="aside-nav__button" type="button" data-tab="Exchange">
+                <span class="aside-nav__icon icon-exchange">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#exchange'></use>
+                  </svg>
+                </span>
+                Exchanger
+              </button>
+            </li>
+            <li class="aside-nav__item">
               <button class="aside-nav__button" type="button" data-tab="Referral">
                 <span class="aside-nav__icon icon-refferal">
                   <svg width='24' height='24'>
@@ -2732,6 +2742,142 @@
 
 
         </section>
+
+        <section class="exchange-section" data-tab-content="Exchange">
+          <div class="exchange-section__box">
+            <div class="dashboard-top">
+              <h2 class="dashboard-top__title">
+                <span class="dashboard-top__title-icon">
+                  <svg width='45' height='45'>
+                    <use href='img/sprite/sprite.svg#repeat'></use>
+                  </svg>
+                </span>
+                Exchange
+              </h2>
+
+              <div class="dashboard-top__inner">
+                <span class="dashboard-top__image">
+                  <svg width='45' height='45'>
+                    <use href='img/sprite/sprite.svg#alert'></use>
+                  </svg>
+                </span>
+                <p>This section presents various payment systems designed for your convenience. Here you can explore different options and choose the optimal format for making deposits. </p>
+              </div>
+            </div>
+            <form class="exchange-form">
+              <div class="exchange-form__box">
+                <div class="exchange-form__col">
+                  <div class="exchange-form__field">
+                    <span class="exchange-form__subtitle">Chose currency:</span>
+                    <div class="select" data-select>
+                      <div class="select__header">
+                        <input type="hidden" class="select__input input-select" id="currency_1" name="currency_1" value="1">
+                        <span class="select__current" data-id="1">
+                          <img width="24" height="24" src="./img/index/matic.png" alt="image">
+                          MATIC
+                        </span>
+                        <svg class="select__current-icon" width='10' height='5'>
+                          <use href='img/sprite/sprite.svg#arrow-d'></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__option" data-id="1" data-type="option">
+                            <img width="24" height="24" src="./img/index/matic.png" alt="image">
+                            MATIC
+                          </li>
+                          <li class="select__option" data-id="2" data-type="option">
+                            <img width="24" height="24" src="./img/sprite/bnb.svg" alt="image">
+                            BNB
+                          </li>
+                          <li class="select__option" data-id="3" data-type="option">
+                            <img width="24" height="24" src="./img/sprite/eth.svg" alt="image">
+                            ETH
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="exchange-form__field">
+                    <span class="exchange-form__subtitle">Your  give:</span>
+                    <div class="exchange-form__inner">
+                      <span class="exchange-form__icon">
+                        <img width='24' height='24' src="./img/index/matic.png" alt="image">
+                      </span>
+                      <span class="exchange-form__value">MATIC</span>
+    
+                      <div class="range mode" data-choose>
+                        <div class="range__inner">
+                          <input type="number" class="range__value" placeholder="129.022">
+                        </div>
+                        <div class="range-slider"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="exchange-form__btn">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#exchange'></use>
+                  </svg>
+                </button>
+                <div class="exchange-form__col">
+                  <div class="exchange-form__field">
+                    <span class="exchange-form__subtitle">Chose currency:</span>
+                    <div class="select" data-select>
+                      <div class="select__header">
+                        <input type="hidden" class="select__input input-select" id="currency_2" name="currency_2" value="1">
+                        <span class="select__current" data-id="1">
+                          <img width="24" height="24" src="./img/sprite/bnb.svg" alt="image">
+                          BNB
+                        </span>
+                        <svg class="select__current-icon" width='10' height='5'>
+                          <use href='img/sprite/sprite.svg#arrow-d'></use>
+                        </svg>
+                      </div>
+                      <div class="select__body">
+                        <ul class="select__list">
+                          <li class="select__option" data-id="1" data-type="option">
+                            <img width="24" height="24" src="./img/sprite/bnb.svg" alt="image">
+                            BNB
+                          </li>
+                          <li class="select__option" data-id="2" data-type="option">
+                            <img width="24" height="24" src="./img/index/matic.png" alt="image">
+                            MATIC
+                          </li>
+                          <li class="select__option" data-id="3" data-type="option">
+                            <img width="24" height="24" src="./img/sprite/ETH.svg" alt="image">
+                            ETH
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="exchange-form__field">
+                    <span class="exchange-form__subtitle">Your  give:</span>
+                    <div class="exchange-form__inner">
+                      <span class="exchange-form__icon">
+                        <img width='24' height='24' src="./img/sprite/bnb.svg" alt="image">
+                      </span>
+                      <span class="exchange-form__value">BNB</span>
+    
+                      <div class="range" data-choose>
+                        <div class="range__inner">
+                          <input type="number" class="range__value" placeholder="1">
+                        </div>
+                        <div class="range-slider"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="main-btn main-btn--mode">Exchange now</button>
+            </form>
+          </div>
+        </section>
+
         <section class="referral-section" data-tab-content="Referral">
           <div class="referral-section__box">
             <div class="dashboard-top">

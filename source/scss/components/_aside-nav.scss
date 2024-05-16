@@ -70,5 +70,10 @@
             transition: all .3s;
             fill: rgba(var(--cl-c),1.0);
         }
+
+
+        &.icon-exchange{
+            margin-top: clamp(2px, .3419vw, 4px);
+        }
     }
 }

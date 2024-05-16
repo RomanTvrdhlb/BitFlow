@@ -140,3 +140,32 @@ referralCards && referralCards.forEach(function(card){
         });
     });
 });
+
+const exchangeForms = document.querySelectorAll('.exchange-form');
+
+exchangeForms && exchangeForms.forEach(function(form){
+    const formBox = form.querySelector('.exchange-form__box');
+    const btn = form.querySelector('.exchange-form__btn');
+    let flag = false;
+
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        if(flag === false){
+            flag = true;
+            addCustomClass(formBox, 'active');
+        } else {
+            flag = false;
+            removeCustomClass(formBox, 'active');
+        }
+    })
+
+    const ranges = form.querySelectorAll('.range__value');
+
+    ranges.forEach(function(range){
+        range.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+            }
+        });
+    })
+})
