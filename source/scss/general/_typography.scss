@@ -495,3 +495,9 @@
     
   }
 }
+
+.pretitle {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: clamp(18px, 2.6496vw, 31px);
+}

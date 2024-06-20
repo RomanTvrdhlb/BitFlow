@@ -1,0 +1,12 @@
+.token-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: clamp(60px, 6.8376vw, 80px);
+    border-radius: 12px;
+    backdrop-filter: blur(5.699999809265137px);
+    background: var(--gradient-w);
+    @include gradient-border(var(--gradient-v),1px);
+    padding: 10px 15px;
+}

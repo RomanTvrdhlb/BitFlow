@@ -39,4 +39,54 @@
     &--mode{
         padding-bottom: clamp(50px, 5.812vw, 68px);
     }
+
+    &--presale{
+        padding-bottom: calc(clamp(60px, 9.7436vw, 114px) + 240px);
+        margin-bottom: -240px;
+        overflow: hidden;
+
+        .choose-section{
+
+            &__box{
+                grid-gap: clamp(30px, 3.9316vw, 46px);
+            }
+        }
+
+        @include tablet{
+            overflow: hidden;
+        }
+
+        &::before,&::after{
+            bottom: 0;
+            top: initial;
+          
+            @include for-tablet{
+                transform: translateY(8%);
+            }
+
+            @include tablet{
+                transform: translateY(6%);
+            }
+
+            @include small-tablet{
+                transform: translateY(0);
+            }
+
+            @include mobile{
+                transform: translateY(-40%);
+            }
+        }
+
+        &::before{
+            @include laptop{
+                left: -5%;
+            }
+        }
+
+        &::after{
+            @include laptop{
+                right: -4.5%;
+            }
+        }
+    }
 }

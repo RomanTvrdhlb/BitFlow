@@ -9,4 +9,13 @@
     @include small-tablet{
         grid-template-columns: 100%;
     }
+
+    &--mode{
+        grid-gap: clamp(12px, 1.7094vw, 20px);
+
+        @include for-small-tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+    }
 }

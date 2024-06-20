@@ -1,0 +1,52 @@
+.custom-countdown{
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 2px;
+        border-radius: 12px;
+        padding: clamp(10px, 2.344vw, 24px);
+        width: clamp(75px, 14.453vw, 148px);
+        height: clamp(75px, 13.477vw, 138px);
+        @include gradient-border(var(--gradient-v),1px);
+        backdrop-filter: blur(5.699999809265137px);
+        background: linear-gradient(180deg, rgba(21, 19, 45, 0) 0%, rgba(21, 19, 45, 0.6) 100%);
+        flex-shrink: 0;
+
+        &:not(:last-child){
+            &::after{
+                content: ':';
+                position: absolute;
+                right: -10px;
+                top: 50%;
+                transform: translate(50%, -50%);
+                font-family: var(--third-family);
+                pointer-events: none;
+                font-weight: 700;
+                font-size: clamp(25px, 3.418vw, 35px);
+                color: rgba(var(--cl-a),1.0);
+            }
+        }
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    &__time{
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: clamp(35px, 7.324vw, 75px);
+        text-align: center;
+        background: var(--gr-d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

@@ -67,4 +67,142 @@
         font-size: 14px;
         line-height: 150%;
     }
+
+    &--token{
+        padding: 14px clamp(20px, 3.4188vw, 40px) 8px;
+        min-height: clamp(150px, 14.0171vw, 164px);
+        display: flex;
+        align-items: center;
+
+        .choose-card{
+
+            &__box{
+                padding-top: 0;
+                grid-gap: 10px;
+
+                @include for-small-tablet{
+                    max-width: Min(25.2137vw, 295px);
+                }
+
+                @include small-tablet{
+                    max-width: clamp(155px, 45.385vw, 295px);
+                }
+            }
+
+            &__image{
+                left: initial;
+                top: initial;
+                bottom: 0px;
+                height: 164px;
+
+                @include for-tablet{
+                    right: clamp(5px, 1.3675vw, 16px);
+                }
+
+                @include tablet{
+                    @include for-small-tablet{
+                        right: -15px;
+                    }
+                }
+
+                @include for-small-tablet{
+                    width: clamp(170px, 22.735vw, 266px);
+                }
+        
+                @include small-tablet{
+                    width: clamp(230px, 34.635vw, 266px);
+                    @include for-mobile{
+                        right: clamp(5px, 0.651vw, 16px);
+                    }
+                }
+
+                @include mobile{
+                    right: -20px;
+                }
+
+                &--trading{
+                    bottom: -10px;
+                    @include for-tablet{
+                        right: -5px;
+                    }
+
+                    @include tablet{
+                        @include for-small-tablet{
+                            right: -35px;
+                        }
+                    }
+                    @include for-small-tablet{
+                        width: clamp(217px, 24.5299vw, 287px);
+                    }
+            
+                    @include small-tablet{
+                        width: clamp(217px, 37.37vw, 287px);
+                        @include for-mobile{
+                            right: -5px;
+                        }
+                    }
+
+                    @include mobile{
+                        right: -20px;
+                    }
+                }
+
+                &--reward{
+                    bottom: -5px;
+                    @include for-tablet{
+                        right: clamp(25px, 3.8462vw, 45px);
+                    }
+
+                    @include tablet{
+                        @include for-small-tablet{
+                            right: -15px;
+                        }
+                    }
+
+                    @include for-small-tablet{
+                        width: clamp(154px, 15.7265vw, 184px);
+                    }
+            
+                    @include small-tablet{
+                        width: clamp(154px, 23.958vw, 184px);
+                        @include for-mobile{
+                            right: clamp(25px, 5.859vw, 45px);
+                        }
+                    }
+
+                    @include mobile{
+                        right: 10px;
+                    }
+                }
+
+                &--reff{
+                    bottom: -5px;
+                    @include for-tablet{
+                        right: clamp(25px, 3.2479vw, 38px);
+                    }
+
+                    @include tablet{
+                        @include for-small-tablet{
+                            right: -15px;
+                        }
+                    }
+
+                    @include for-small-tablet{
+                        width: clamp(194px, 19.1453vw, 224px);
+                    }
+            
+                    @include small-tablet{
+                        width: clamp(194px, 29.167vw, 224px);
+                        @include for-mobile{
+                            right: clamp(25px, 4.948vw, 38px);
+                        }
+                    }
+
+                    @include mobile{
+                        right: 0px;
+                    }
+                }
+            }
+        }
+    }
 }

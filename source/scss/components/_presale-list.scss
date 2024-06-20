@@ -1,0 +1,41 @@
+.presale-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 13px;
+
+ 
+
+    &__item{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        justify-content: space-between;
+    }
+
+    &__name{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(var(--cl-c),1.0);
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        text-align: right;
+
+        &.green{
+            color: rgba(var(--cl-j),1.0);
+        }
+    }
+
+    &--mode{
+        .presale-list{
+            &__item{
+                grid-gap: 4px;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

@@ -371,4 +371,77 @@
       }
     }
   }
+
+  &--presale{
+    padding: clamp(35px, 3.7607vw, 44px) 0 clamp(70px, 14.1026vw, 165px);
+
+    &::before, &::after{
+      transform: translateY(-48%);
+      display: block;
+    }
+
+    .coins-list{
+      position: absolute;
+      top: 0;
+
+      &--left{
+        @include for-desktop{
+          left: 0;
+        }
+
+        @include desktop{
+          @include for-laptop{
+            left: 4%;
+          }
+        }
+
+        @include laptop{
+          @include for-tablet{
+            left: 5%;
+          }
+        }
+
+        @include tablet{
+          @include for-small-tablet{
+          top: 10%;
+          left: 1%;
+          }
+        }
+
+        @include small-tablet{
+          left: -4%;
+          top: 0;
+        }
+      }
+
+      &--right{
+        @include for-desktop{
+          right: 0;
+        }
+
+        @include desktop{
+          @include for-laptop{
+            right: 4%;
+          }
+        }
+
+        @include laptop{
+          @include for-small-tablet{
+          right: 5%;
+          }
+        }
+
+        @include tablet{
+          @include for-small-tablet{
+          top: 10%;
+          }
+        }
+
+        @include small-tablet{
+          top: 0;
+          right: 1%;
+        }
+      }
+    }
+  }
 }
