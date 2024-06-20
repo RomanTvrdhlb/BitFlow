@@ -2,14 +2,15 @@
     display: grid;
     align-items: center;
     grid-gap: clamp(10px, 1.6239vw, 19px);
-
+    height: clamp(60px, 6.8376vw, 80px);
+    
     @include for-small-tablet{
         grid-template-columns: repeat(5, 1fr);
     }
 
     @include small-tablet{
         grid-template-columns: repeat(5, 140px);
-        overflow: auto;
+        overflow-x: auto;
         width: calc(100% + (var(--container-offset) * 2));
         margin-left: calc(var(--container-offset) * -1);
         padding: 0 var(--container-offset);
